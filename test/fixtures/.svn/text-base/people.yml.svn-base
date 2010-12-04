@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+slava:
+  id: 1
+  actor_id: 1
+  first_name: "Slava"
+  last_name: "Hrenov"
+  position: "programmer"
+two:
+  id: 2
+  actor_id: 2
+  first_name: "Slava1"
+  last_name: "Hrenov1"
+  position: "programmer1"

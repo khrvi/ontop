@@ -1,0 +1,7 @@
+<div class="content-title"><a href=""><%= 'Редактирование профиля пользователя' %></a></div>
+<br>
+<% form_tag :action => 'update', :id => @actor do %>
+  <%= render :partial => 'edit' %>
+  <%= submit_tag 'Сохранить' %>
+<% end %>
+<%= link_to 'Назад', :action => 'show' %>

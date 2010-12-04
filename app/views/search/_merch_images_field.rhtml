@@ -1,0 +1,27 @@
+<% pic = @merchandise.albums %>
+<table width="300px" cellspacing="0" cellpadding="0" border="0">
+  <tr width="300px" height="150px" align="center">
+    <td>
+      <div id="picture">
+        <% unless pic.empty? %>
+          <%= render :partial => 'picture', :locals => {:picture_id => pic.first.picture_id} %>
+        <% else %>
+          <%= image_tag "noimage.jpg" %>
+        <% end %>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td valign="center" align="center">
+      <table width="300px" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <% pic.each do |pb| %>
+            <td valign="center" align="center">
+              <%= picture_link_tag pb.picture, true %>
+            </td>
+          <% end %>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

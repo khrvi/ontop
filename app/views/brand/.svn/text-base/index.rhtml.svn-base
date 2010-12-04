@@ -1,0 +1,10 @@
+<div class="content-title">
+  <a href="">Основные Брэнды</a>
+</div>
+<br>
+<div id="sort">
+  <%= render :partial => 'catalog/view_sort', :locals => {:tab => 1}  %>
+</div>
+<div id="brands" >
+  <%= render :partial => 'list', :locals => {:tab => 1}  %>
+</div>

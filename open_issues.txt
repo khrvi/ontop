@@ -1,0 +1,5 @@
+Open issues:
+1. Controller 'User', remove all checkings  to the model.
+!2. Delete all pictures tables and create only one polymorphic table instead
+3. Create a common method for method 'def self.for_select'
+4. Add checking for size of the pictures, after upload action

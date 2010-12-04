@@ -1,0 +1,26 @@
+<% form_tag(:controller => 'session', :action => 'create') do %>
+  <div>
+    <% u = nil #controller.current_user 
+    %>
+    
+    <% unless u %>
+      <%= link_to 'Регистрация', {:controller => "/signup"} %>
+      |
+    <% end %>
+    
+    <%= link_to 'FAQ', {:controller => "/home", :action => "faq"} %>
+    
+    
+  
+  </div>
+
+  <div>
+    <%=
+     if @user_logged_in #controller.current_user
+       render(:partial => "shared/logoutsub")
+     end
+    %>
+    
+  </div>
+
+<% end %>

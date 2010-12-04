@@ -1,0 +1,1 @@
+<%= link_to("Logout " + @current_user.login, {:controller => "/logout"}) %>

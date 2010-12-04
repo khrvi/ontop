@@ -1,0 +1,8 @@
+<h1><%= 'Создание новой компании' %></h1>
+
+<% form_tag :action => 'create' do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag 'Сохранить' %>
+<% end %>
+
+<%= link_to 'Назад', :action => 'list' %>

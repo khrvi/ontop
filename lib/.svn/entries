@@ -1,0 +1,82 @@
+8
+
+dir
+164
+http://svn2.assembla.com/svn/uznaj/lib
+http://svn2.assembla.com/svn/uznaj
+
+
+
+2008-09-12T10:15:20.046124Z
+146
+khrvi
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+38686702-15cf-42e4-a595-3071df8bf5ea
+
+authenticated_test_helper.rb
+file
+
+
+
+
+2008-08-14T12:46:14.906250Z
+030770d2516f2a2eda928ff2490ff47a
+2008-01-06T17:08:19.938269Z
+1
+khrvi
+
+tasks
+dir
+
+upload.rb
+file
+
+
+
+
+2008-09-12T19:47:40.484375Z
+7c71ea0e0c052faa8fb83d24bce4afa5
+2008-09-12T10:15:20.046124Z
+146
+khrvi
+
+authenticated_system.rb
+file
+
+
+
+
+2008-08-14T12:46:14.921875Z
+811b9ca7cc6408800dd9549ebf17b40e
+2008-01-06T17:08:19.938269Z
+1
+khrvi
+
+usermonitor.rb
+file
+
+
+
+
+2008-08-14T12:46:14.953125Z
+109267736172b3a6ff0d2357c3a70366
+2008-01-06T17:08:19.938269Z
+1
+khrvi
+
+railroad
+dir
+

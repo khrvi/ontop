@@ -1,0 +1,18 @@
+<% item = params[:item]%>
+    <li  id='<%= item.id %>'>
+		<%= item.name %>
+		<ul id="p_t_l1" >
+		   <% @t1.each do |item1| %>
+			  <%= render :partial => "sort", :locals => {:item=>item1} %>
+		   <% end %> 
+		</ul> 
+	</li>
+			  
+<%= sortable_element "p_t_l",:tree =>true, :url => {:action => 'sort_todos'} %>
+		  
+		  
+		 
+		  
+		  
+		 
+					   

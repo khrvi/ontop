@@ -1,0 +1,6 @@
+      <tr>
+        <td class="<%=td_class%>">
+          <%= link_to caption, action, {:class => link_class} %>
+        </td>
+      </tr>
+      

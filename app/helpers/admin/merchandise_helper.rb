@@ -1,0 +1,2 @@
+module Admin::MerchandiseHelper
+end

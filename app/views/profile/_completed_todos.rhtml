@@ -1,0 +1,12 @@
+<ul id="completed_todo_list">
+    <% if @temp %>
+        <% @temp.each do |item| %>
+            <li class="completed_todo" id='<%= item.id %>'>
+                <%= h item.name %>
+            </li>
+            <%= sortable_element 'completed_todo_list', :tree =>true, :url => {:action => 'sort_todos'} %>
+            <%= draggable_element(item.id, :ghosting=>true, :revert=>true) %>
+        <% end %>
+    <% end %>
+</ul>
+

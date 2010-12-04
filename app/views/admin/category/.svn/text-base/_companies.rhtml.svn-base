@@ -1,0 +1,13 @@
+<span class="span_h2"><%= city.name %></span>
+<div>
+  <div style="float:left;width:20px;height:10px;"></div>
+  <div style="float:left;">
+    <p>
+      <% companies.each do |c| %>
+        <%= link_to_remote c.name, :url => {:action => 'categories_for_country', :company_id => c.id},
+              :complete => "set_internal_dialog_position()" %> <br>
+      <% end %>
+    </p>
+  </div>
+  <div style="clear:both"></div>
+</div>

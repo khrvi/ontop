@@ -1,0 +1,40 @@
+8
+
+dir
+164
+http://svn2.assembla.com/svn/uznaj/vendor/rails/actionpack/test/fixtures/symlink_parent
+http://svn2.assembla.com/svn/uznaj
+
+
+
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+38686702-15cf-42e4-a595-3071df8bf5ea
+
+symlinked_layout.erb
+file
+
+
+
+
+2008-09-03T19:34:17.140625Z
+980e7502c427a607d0b73031572f34f7
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+

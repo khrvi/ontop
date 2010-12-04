@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/uznaj/!svn/ver/150/app/views/admin/company
+END
+list.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/uznaj/!svn/ver/150/app/views/admin/company/list.rhtml
+END
+result.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/uznaj/!svn/ver/40/app/views/admin/company/result.rhtml
+END
+_form.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/uznaj/!svn/ver/150/app/views/admin/company/_form.rhtml
+END
+upload.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/uznaj/!svn/ver/45/app/views/admin/company/upload.rhtml
+END
+edit.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/uznaj/!svn/ver/150/app/views/admin/company/edit.rhtml
+END
+new.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/uznaj/!svn/ver/40/app/views/admin/company/new.rhtml
+END

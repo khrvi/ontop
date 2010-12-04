@@ -1,0 +1,130 @@
+<div class="content-title">
+    <a href="">Профиль пользователя: <%= @current_user.login %></a>
+</div>
+<br>
+
+<table width ='100%' border = "0">
+  <tr>
+		<td width ='30%' style="vertical-align:top;">
+			<%= render :partial => 'shared/table', :locals => {:width => '100%',
+    						 :name => "user_data",
+    						 :partial => "/profile/user_data",
+    						 :title => "Данные пользователя:",
+    						 :hash => {} } %>
+    	<br/>	
+      <%= render :partial => 'shared/table', :locals => {:width => '100%',
+    						 :name => "actions_user",
+    						 :partial => "/profile/actions_user",
+    						 :title => "Доступные действия:",
+    						 :hash => {} } %>						 
+    	
+    	</td>
+		<td width ='50%' style="vertical-align:top;">
+		<% if person = @current_user.actor.person %>
+			<% unless person.albums.empty? %>
+				<%= render :partial => 'shared/table', :locals => {:width => '100%',
+    						    :name => "foto_user",
+    						    :partial => "/shared/image_in_window",
+    						    :title => "Фото:",
+    						    :hash => {:pic => @person.albums[0].picture } } %>
+			  <% end %>
+    	<% end %>				 
+		</td>
+
+  </tr>
+</table>
+<br>
+
+<% if @str=='Редактировать'%>
+<div class="content-title"><a href=""> Предприятие: </a></div>
+<br>
+	<table width ='100%' border = "0">
+		<tr>
+				<% if @company %>
+					<td width ='50%' style="vertical-align:top;">
+						<%= render :partial => 'shared/table', :locals => {:width => '100%',
+		    						 :name => "description_company",
+		    						 :partial => "/profile/description_company",
+		    						 :title => "Данные предприятия:",
+		    						 :hash => {} } %>
+					</td>
+				<% end %>
+			
+			 <td width ='50%' style="vertical-align:top;">
+		
+				 <% if @valid_role %>
+					 <% if @company %>
+					 	<% users = CustomCompanyName.find(:all, :conditions => ["company_id=?",@company]) %>
+					 	<% if users.length > 0 %>
+					 		<%= render :partial => 'shared/table', :locals => {:width => '100%',
+				    						 :name => "users_company",
+				    						 :partial => "/profile/company_users",
+				    						 :title => "Пользователи предприятия:",
+				    						 :hash => {:users => users} } %>
+							<br/>
+						<% end %>
+					<% end %>
+					  <%= render :partial => 'shared/table', :locals => {:width => '100%',
+				    						 :name => "actions_users_company",
+				    						 :partial => "/profile/actions_company_users",
+				    						 :title => "Доступные действия:",
+				    						 :hash => {} } %>
+				<% end %>		
+			</td> 
+			 <% unless @company %>
+			 	 <td width ='35%' style="vertical-align:top;">
+			 	 </td>
+			 <% end %>
+		 </tr>
+	</table>
+<% end %>   
+
+ <% if @company %>
+ 	<% if @valid_role %>
+	 <div class="content-title"><a href=""> Категории товаров предприятия: </a></div>
+	 <br>
+	 	<table width ='100%' border = "0">
+			<tr>
+				<td width ='50%' style="vertical-align:top;">
+	 			<%= render :partial => 'shared/table', :locals => {:width => '100%',
+			    						 :name => "categories_company",
+			    						 :partial => "/catalog/categories",
+			    						 :title => "Категории Предприятия:",
+			    						 :hash => {:list => nil,:all_links => nil } } %>
+			    </td>
+				<td width ='50%' style="vertical-align:top;">
+					<%= render :partial => 'shared/table', :locals => {:width => '100%',
+				    						 :name => "actions_category",
+				    						 :partial => "/profile/actions_show_category",
+				    						 :title => "Доступные действия:",
+				    						 :hash => {:list => nil} } %>
+				</td>
+			</tr>
+		</table>
+ 		
+    <% end %>
+ <% end %>		
+ <br>
+ <% if @company %>
+	<div class="content-title"><a href=""> Товары предприятия: </a></div>
+		<br>
+		<table width ='100%' border = "0">
+			<tr>
+				<td width ='50%' style="vertical-align:top;">
+	 			<%= render :partial => 'shared/table', :locals => {:width => '100%',
+			    						 :name => "list_merchandise",
+			    						 :partial => "/shared/chart",
+			    						 :title => "Товары предприятия:",
+			    						 :hash => {} } %>
+			    </td>
+				<td width ='50%' style="vertical-align:top;">
+					<%= render :partial => 'shared/table', :locals => {:width => '100%',
+				    						 :name => "actions_merchandise",
+				    						 :partial => "/profile/actions_merchandise",
+				    						 :title => "Доступные действия:",
+				    						 :hash => {:list => nil} } %>
+				</td>
+			</tr>
+		</table>
+	<br>
+ <% end %>

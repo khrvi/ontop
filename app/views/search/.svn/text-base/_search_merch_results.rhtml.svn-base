@@ -1,0 +1,46 @@
+<% array_names = [] %>
+<% merchandises = Merchandise.find_all_by_id(array) %>
+<% if merchandises.length > 0 %>
+    <% if merchandises.length > 0 %>
+        <table class="data">
+            <tr>
+                <th class="data">Категория</th>
+                <th class="data">Производитель</th>
+                <th class="data">Наименование</th>
+                <th class="data">Цена</th>
+                <th class="data">Характеристики</th>
+                <% cat = Category.find_by_id(Merchandise.find_by_id(mer.merchan_id).category_id).id %>
+                <% column = MerchandiseColumnName.find(:all, :conditions => ["category_id=?", cat]) %>
+
+                <% column.each do |q| %>
+                    <% array_names << q.column_name %>
+                <% end %>
+           </tr>
+
+            <% for merchandise in merchandises %>
+                <tr>
+                    <td class="data" valign="top"><%= h merchandise.category.name %></td>
+                    <td class="data" valign="top"><%= h merchandise.brand.name %></td>
+                    <td class="data" valign="top">
+                        <b><%= link_to h(merchandise.name), :controller => "search", :action => 'show_merchandise', :id => merchandise.id %>
+                        </b><br>
+                    </td>
+                    <td class="data" valign="top"><%= h merchandise.price %></td>
+
+                    <% column1 = MerchandiseColumnDesc.find_all_by_merchan_id(merchandise.id) %>
+                    <% a = 0 %>
+
+                    <% column_value = '' %>
+                    <% column1.each do |q| %>
+                        <% column_value << array_names[a] + ": " + q.column_value + " <br/>" %>
+                        <% a += 1 %>
+                    <% end %>
+                    <%= h column_value %>
+                </tr>
+            <% end %>
+        </table>
+        <br/>
+    <% end %>
+<% else %>
+    Не найдено ни одного товара
+<% end %>	

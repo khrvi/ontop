@@ -1,0 +1,17 @@
+<% form_tag({ :action=>'upload_file'}, :multipart => true) do %>
+  <h4>Пожалуйста выберите CSV файл для последующей загрузки</h4>
+  <%= file_field_tag "file" %>
+  <%= submit_tag  "Загрузить" %>
+<% end %>
+<br/>
+Нажмите
+<a href=""  onclick=" new Effect.toggle('format', 'blind'); return false; ">
+сдесь</a>
+ , чтобы просмотреть структуру CSV файла для загрузки брэндов
+<div id="format"  style="display: none;" >
+  <hr>
+  Первая строка используется только под комментарий
+  <br/>
+  Название брэнда, короткое название, описание, сайт производителя, путь к файлу, путь к файлу ....
+  <hr>
+</div>	  

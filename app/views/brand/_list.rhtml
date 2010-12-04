@@ -1,0 +1,40 @@
+<table class="data">
+  <tr>
+    <th class="data">Логотип</th>
+    <th class="data">Наименование</th>
+    <th class="data">Описание</th>
+    <th class="data">Сайт</th>
+    <% if @valid_role %>
+      <th class="data">Операции</th>
+    <% end %>
+  </tr>
+
+  <% for brand in @brands %>
+    <tr>
+      <td class="data" valign="top">
+        <% if brand.albums.empty? %>
+          <%= image_tag "noimage.jpg" %>
+        <% else %>
+          <%= picture_tag brand.albums.first.picture_id, false %>
+        <% end %>
+      </td>
+      <td class="data" valign="top"> <%= link_to h(brand.name), {:controller => "/brand" ,:action => 'show', :brand_id => brand.id} %> </td>
+      <td class="data" valign="top"> <%= h brand.description %> </td>
+      <td class="data" valign="top"> <%= link_to h(brand.site), "http://" + h(brand.site) %> </td>
+      <% if @valid_role %>
+        <td class="data" valign="top">
+          <%= link_to 'Редактировать', :action => 'edit', :id => brand %>
+          <%= link_to 'Удалить', { :action => 'destroy', :id => brand }, :confirm => 'Вы уверены?', :method => :post %>
+        </td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
+<br />
+<%= will_paginate @brands %>
+<br />
+<% if @valid_role %>
+  <%= link_to 'Добавить новый бренд', :action => 'new' %>
+  <br/>
+  <%= link_to 'Загрузить CSV файл', :action => 'upload' %>
+<% end %>

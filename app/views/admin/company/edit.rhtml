@@ -1,0 +1,6 @@
+<h1> Редактирование данных компании> </h1>
+<% form_tag :action => 'update', :id => @company do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag 'Сохранить' %>
+<% end %>
+<%= link_to 'Назад', :action => 'list' %>

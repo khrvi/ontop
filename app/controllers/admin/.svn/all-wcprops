@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/uznaj/!svn/ver/150/app/controllers/admin
+END
+statistics_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/uznaj/!svn/ver/147/app/controllers/admin/statistics_controller.rb
+END
+abstract_admin_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/uznaj/!svn/ver/55/app/controllers/admin/abstract_admin_controller.rb
+END
+category_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/uznaj/!svn/ver/146/app/controllers/admin/category_controller.rb
+END
+quick_entry_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/uznaj/!svn/ver/147/app/controllers/admin/quick_entry_controller.rb
+END
+merchandise_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/uznaj/!svn/ver/146/app/controllers/admin/merchandise_controller.rb
+END
+main_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/uznaj/!svn/ver/142/app/controllers/admin/main_controller.rb
+END
+company_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/uznaj/!svn/ver/146/app/controllers/admin/company_controller.rb
+END
+person_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/uznaj/!svn/ver/150/app/controllers/admin/person_controller.rb
+END

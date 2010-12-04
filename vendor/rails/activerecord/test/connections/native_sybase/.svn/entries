@@ -1,0 +1,40 @@
+8
+
+dir
+164
+http://svn2.assembla.com/svn/uznaj/vendor/rails/activerecord/test/connections/native_sybase
+http://svn2.assembla.com/svn/uznaj
+
+
+
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+38686702-15cf-42e4-a595-3071df8bf5ea
+
+connection.rb
+file
+
+
+
+
+2008-09-03T19:33:24.000000Z
+b6d731c93c3c9bb5a42c0b2ff59b97e0
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+

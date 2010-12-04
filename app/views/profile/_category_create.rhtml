@@ -1,0 +1,23 @@
+<% form_tag :controller => '/profile', :action => 'create_cat' do %>
+    <table>
+        <tr>
+            <td><h4>Название</h4></td>
+            <td><%= text_field 'category', 'name', :size => 80 %></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <%= check_box_tag 'last', '1' %>Категория содережит товары
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <%= select 'category', "parent_category_id", Category.select, { :include_blank => true } %>
+            </td>
+        </tr>
+        <tr>
+            <td><h4>Сокращённое название</h4></td>
+          <td><%= text_area 'category', 'category_comment', {:style => 'width:300px; height:100px;'} %></td>
+        </tr>
+    </table>
+    <%= submit_tag 'Создать' %>
+<% end %>

@@ -1,0 +1,88 @@
+8
+
+dir
+164
+http://svn2.assembla.com/svn/uznaj/vendor/rails/actionpack/test
+http://svn2.assembla.com/svn/uznaj
+
+
+
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+38686702-15cf-42e4-a595-3071df8bf5ea
+
+controller
+dir
+
+abstract_unit.rb
+file
+
+
+
+
+2008-09-03T19:34:24.140625Z
+d640825da6b5b382fe1171715f91bead
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+
+adv_attr_test.rb
+file
+
+
+
+
+2008-09-03T19:34:24.171875Z
+4a02419ad1aa46452ea73f451c20d20a
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+
+fixtures
+dir
+
+activerecord
+dir
+
+active_record_unit.rb
+file
+
+
+
+
+2008-09-03T19:34:24.187500Z
+422783fe10b0e4a0d217fc1b837835c4
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+
+template
+dir
+
+testing_sandbox.rb
+file
+
+
+
+
+2008-09-03T19:34:24.234375Z
+51d93ebbf8ed95b77dd955858f55d46e
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+

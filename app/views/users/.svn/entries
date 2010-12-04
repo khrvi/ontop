@@ -1,0 +1,52 @@
+8
+
+dir
+164
+http://svn2.assembla.com/svn/uznaj/app/views/users
+http://svn2.assembla.com/svn/uznaj
+
+
+
+2008-08-27T20:26:16.955303Z
+124
+khrvi
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+38686702-15cf-42e4-a595-3071df8bf5ea
+
+_captcha.rhtml
+file
+
+
+
+
+2008-08-27T20:25:57.781250Z
+169b062ee7baf5dca6592514b8f6ff00
+2008-08-27T20:26:16.955303Z
+124
+khrvi
+
+new.rhtml
+file
+
+
+
+
+2008-08-27T20:16:37.156250Z
+35309555faf6335e3e31a2326bfc64e7
+2008-08-27T20:16:47.887738Z
+123
+khrvi
+

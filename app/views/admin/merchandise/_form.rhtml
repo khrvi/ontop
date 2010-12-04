@@ -1,0 +1,73 @@
+<%= error_messages_for 'merchandise' %>
+<div id="a_tabbar" class="dhtmlxTabBar" imgpath="/images/tab_img/" style="width:700px; height:460px;" skinColors="#F8F2EE,#DFC3AE">
+    <div id="a1" name="Товар" style="width:600px;height:400px;">
+        <div>
+            <br/>
+            <br/> Категория:
+            <div id="categ">
+                <%= render :partial => 'category_details', :locals => {:category_id => @merchandise.category_id, :category => @merchandise.category, :answer_ajax => true} %>
+            </div>
+            <br/>
+
+            <div>
+                Фирма производитель:
+                <%= select 'merchandise', "brand_id", Brand.for_select %>
+            </div>
+            <br/>
+            <br/>
+            Наименование:
+            <%= text_field 'merchandise', 'name', :size => 80 %>
+            <br/>
+            Цена:
+            <%= text_field 'price', 'amount', :size => 12 %>
+            <br/>
+            Валюта:
+            <%= select 'price', "currency_id", Currency.for_select %>
+            <br/>
+            Количество:
+            <%= text_field 'price_by_date', 'quantity', :size => 12 %>
+        </div>
+    </div>
+
+    <div id="a2" name="Параметры" style="width:670px;height:420px;">
+        <div id="b_tabbar" class="dhtmlxTabBar" imgpath="/images/tab_img/" style="width:670px; height:400px; padding:10px;" skinColors="#F8F2EE,#DFC3AE">
+            <div name="Параметры" id="pa">
+                <%= render :partial => '/search/parameters_field', :locals => {:category_id => nil,  :create_new_mer => false, :first_time => true} %>
+            </div>
+        </div>
+    </div>
+
+    <div id="a3" name="Описание" style="width:640px;height:400px;margin:10px;">
+        <%= text_area 'merchandise', 'description', {:style => 'width:660px; height:360px;'} %>
+    </div>
+
+    <div name="Изображения" style="width:640px;height:400px;">
+        <% unless @flag_new %>
+            <table border="0" width="640px" align="center">
+                <tr width="650px" height="300px" align="center">
+                    <td>
+                        <% unless pic = @merchandise.albums.empty? %>
+                            <div id="picture">
+                                <%= render :partial => '/search/picture', :locals => {:picture_id => pic.picture_id} %>
+                            </div>
+                        <% end %>
+                    </td>
+                </tr>
+                <tr width="640px" height="105px" align="center">
+                    <td>
+                        <table width="400px" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                                <% PictureMerchandise.find_all_by_merchandise_id(@merchandise.id).each do |pb| %>
+                                    <td valign="center" align="center">
+                                        <%= picture_link_tag pb.picture, false %>
+                                    </td>
+                                <% end %>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        <% end %>
+        <%= render :partial => '/shared/image_upload', :locals => {} %>
+    </div>
+</div>

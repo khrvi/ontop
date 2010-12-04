@@ -1,0 +1,19 @@
+<% form_tag({ :action=>'upload_file'}, :multipart => true) do %>
+  <h4><%= 'Подалуцста выберите CSV файл для загрузки информации' %></h4>
+  <%= file_field_tag "file" %> 
+  <%= submit_tag  "Save" %>
+<% end %>
+
+  <br/>
+  <%= 'Нажмите' %>
+  <% t='сдесь'%>
+  <a href=""  onclick="  new Effect.toggle('format', 'blind'); return false; ">
+  <%= 'сдесь' %></a>
+  <%= ', что-бы просмотреть структуру CSV файла для загрузки компаний' %> 
+  <div id="format"  style="display: none;" >
+	<hr>
+	  The first string only for comment
+	<br/>
+	Country name, city name, short name, country comment, acreage, yearly_production 
+	<hr> 
+  </div>	  

@@ -1,0 +1,26 @@
+<h1><%= 'Пользователь ' %></h1>
+
+<table class="data">
+  <tr>
+    <th class="data"> <%= 'Login' %> </th>
+    <th class="data"> <%= 'Имя' %> </th>
+    <th class="data"> <%= 'Действия' %> </th>
+  </tr>
+  
+<% for actor in @actors %>
+  <% u = actor.user %>
+  <% p = actor.person %>
+  <tr>
+    <td class="data"> <%= if u then u.login else '---' end %> </td>
+    <td class="data"> <%= if p then p.full_name else '---' end %> </td>
+    <td class="data">
+      <%= link_to 'Редактировать', :action => 'edit', :id => actor %>
+      <%= link_to 'Удалить', { :action => 'destroy', :id => actor}, :confirm => 'Вы уверены?', :method => :post %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Новый пользователь', :action => 'new' %>

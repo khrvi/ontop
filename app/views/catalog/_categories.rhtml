@@ -1,0 +1,32 @@
+<% if @company %>
+  <% categories = @company.categories.sort_by{|a| a.name}  %>
+<% else %>
+  <% categories = list ? list : [] %>
+<% end %>
+<% if categories.length > 0 %>
+  <% parent_categiries = [] %>
+  <% categories.each do |category| %>
+    <% parent_categiries << category if category.root? %>
+  <% end %>
+  <% parent_categiries.each do |r| %>
+    <table>
+      <tr>
+        <td>
+          <div id="link1_<%= r.id %>" >
+            <%= link_to_remote image_tag('/images/background/minus.gif', :style => 'border:none;'), :url => {:controller => "catalog",:action => 'list_up_down', :id => r.id, :flag => true, :contr => true} %>
+          </div>
+        </td>
+        <td>
+          <%=h r.name %>
+        </td>
+      </tr>
+    </table>
+    <div id="div1_<%= r.id %>" >
+      <% if r.categories.length > 0 %>
+        <%= render :partial => '/catalog/child_category',:locals =>{:child => r.categories, :all_links => all_links} %>
+      <% end %>
+    </div>
+  <% end %>
+<% else %>
+  Для выбранной компании категорий не найдено
+<% end %>

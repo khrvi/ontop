@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/uznaj/!svn/ver/161/app/views/admin/merchandise
+END
+list.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/uznaj/!svn/ver/109/app/views/admin/merchandise/list.rhtml
+END
+_merchandise_list.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/uznaj/!svn/ver/45/app/views/admin/merchandise/_merchandise_list.rhtml
+END
+result.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/uznaj/!svn/ver/109/app/views/admin/merchandise/result.rhtml
+END
+_category_details.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/uznaj/!svn/ver/45/app/views/admin/merchandise/_category_details.rhtml
+END
+_form.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/uznaj/!svn/ver/157/app/views/admin/merchandise/_form.rhtml
+END
+_merchandise_image.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/uznaj/!svn/ver/153/app/views/admin/merchandise/_merchandise_image.rhtml
+END
+upload.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/uznaj/!svn/ver/151/app/views/admin/merchandise/upload.rhtml
+END
+_company_name.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/uznaj/!svn/ver/45/app/views/admin/merchandise/_company_name.rhtml
+END
+edit.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/uznaj/!svn/ver/55/app/views/admin/merchandise/edit.rhtml
+END
+_region_selection.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/uznaj/!svn/ver/153/app/views/admin/merchandise/_region_selection.rhtml
+END
+_merchandise_table.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/uznaj/!svn/ver/153/app/views/admin/merchandise/_merchandise_table.rhtml
+END
+_short_info.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/uznaj/!svn/ver/161/app/views/admin/merchandise/_short_info.rhtml
+END
+new.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/uznaj/!svn/ver/55/app/views/admin/merchandise/new.rhtml
+END

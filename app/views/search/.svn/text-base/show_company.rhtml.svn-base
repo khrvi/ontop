@@ -1,0 +1,31 @@
+<div class="content-title">
+    <a href=""> Информация о компании <%= h @company.name %></a>
+</div>
+<br>
+<h1><%= h @company.name %></h1>
+
+<% if @valid_role %>
+    <p><%= link_to 'Редактировать', :controller => 'admin/company', :action => 'edit', :id => @company.id %></p>
+<% end %>
+<p>
+    Краткое название: <%= h @company.custom_name %> <br/>
+</p>
+<p>
+    Подробная информация:
+</p>
+<p>
+    Описание компании: <%= h @company.company_comment %>
+</p>
+<p>
+    Телефон: <%= h @company.tel %> <br/>
+</p>
+<p>
+    Факс: <%= h @company.fax %> <br/>
+</p>
+<p>
+    URL: <%= h @company.url %> <br/>
+</p>
+
+
+
+

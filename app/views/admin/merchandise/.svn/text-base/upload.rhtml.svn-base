@@ -1,0 +1,17 @@
+<% form_tag({ :action=>'upload_file'}, :multipart => true) do %>
+  <h4> Пожалуйста выберите CSV файл для загрузки информации </h4>
+  <%= file_field_tag "file" %>
+  <%= submit_tag  "Сохранить" %>
+<% end %>
+<br/>
+Нажмите
+<a href=""  onclick="  new Effect.toggle('format', 'blind'); return false; ">
+сдесь</a>
+, чтобы просмотреть структуру CSV файла для загрузки товаров
+<div id="format"  style="display: none;" >
+  <hr>
+  The first string only for comment
+  <br/>
+  Merchandise name, category name, description, acreage, grapevariety, terroir, custom name, tel, fax, email, url
+  <hr>
+</div>	  

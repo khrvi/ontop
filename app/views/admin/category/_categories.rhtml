@@ -1,0 +1,34 @@
+<% depth = 0 %>
+<ul id="p_t_l1" >
+	<% cr = @temp3 = Category.find(:all, :conditions => ['parent_category_id is null'], :order => 'name') %>
+	<% cr.each do |r| %>
+	
+	  <% root = Category.find(:all, :conditions => ['parent_category_id=?', r.id], :order => 'name') %>
+		<% if root.length > 0%> 
+		  <li class="pending_todo" id="<%= r.id %>" >
+		  	<table>
+				<tr>
+				<td>
+		  			<div id="link_<%= r.id %>" >
+		  				<%= link_to_remote image_tag('/images/background/minus.gif', :style => 'border:none;'), :url => {:controller => "/catalog",:action => 'list_up_down', :id => r.id, :flag => true, :contr => false} %>
+		   			</div>
+		   		</td>
+		    	<td>
+		    		
+		    			<%= r.name %>
+		   		
+		  	    </td>
+		  		</tr>
+		   	</table>	
+		  <% else %>
+		  		<%= r.name %>	
+		 <% end %>
+		 
+		 <%= draggable_element(r.id.to_s, :ghosting=>true, :revert=>true) %>   
+		 <div id="div_<%= r.id %>" >
+		     <%= render :partial => '/admin/category/child_category',:locals =>{:root => root , :depth => depth + 1} %>
+		 </div>
+		 </li>
+	<% end %>
+
+</ul>   

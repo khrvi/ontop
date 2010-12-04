@@ -1,0 +1,140 @@
+# Logfile created on Fri Sep 12 22:49:39 +0300 2008 by /
+LocalIndex: ensure_index_exists at L:/projects/index/development/merchandise
+rebuild index: [Merchandise(id: integer, category_id: integer, brand_id: integer, name: string, description: text, validated: boolean, checked: boolean, created_by: string, created_at: datetime, updated_by: string, updated_at: datetime)]
+reindexing model Merchandise
+reindex model Merchandise : 100.00% complete : 0.01 secs to finish
+LocalIndex: ensure_index_exists at L:/projects/index/development/merchandise
+LocalIndex: ensure_index_exists at L:/projects/index/development/merchandise
+query: name:or
+stored_fields: 
+LocalIndex: ensure_index_exists at L:/projects/index/development/company
+rebuild index: [Company(id: integer, actor_id: integer, name: string, company_comment: text, custom_name: string, kind: string, tel: string, fax: string, email: string, url: string, checked: boolean, valid_from: date, valid_thru: date, created_by: string, created_at: datetime, updated_by: string, updated_at: datetime)]
+reindexing model Company
+reindex model Company : 100.00% complete : 0.27 secs to finish
+LocalIndex: ensure_index_exists at L:/projects/index/development/company
+LocalIndex: ensure_index_exists at L:/projects/index/development/company
+query: name:or
+stored_fields: 
+LocalIndex: ensure_index_exists at L:/projects/index/development/category
+rebuild index: [Category(id: integer, parent_category_id: integer, name: string, sequence: integer, category_comment: text, validated: boolean, created_by: string, created_at: datetime, updated_by: string, updated_at: datetime)]
+reindexing model Category
+reindex model Category : 100.00% complete : 0.50 secs to finish
+LocalIndex: ensure_index_exists at L:/projects/index/development/category
+LocalIndex: ensure_index_exists at L:/projects/index/development/category
+query: name:or
+stored_fields: 
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+rebuild index: [Brand(id: integer, name: string, description: text, site: string, validated: boolean, checked: boolean)]
+reindexing model Brand
+reindex model Brand : 100.00% complete : 0.23 secs to finish
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+query: name:or
+stored_fields: 
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/merchandise
+LocalIndex: ensure_index_exists at L:/projects/index/development/merchandise
+LocalIndex: ensure_index_exists at L:/projects/index/development/merchandise
+query: name:or
+stored_fields: 
+LocalIndex: ensure_index_exists at L:/projects/index/development/company
+LocalIndex: ensure_index_exists at L:/projects/index/development/company
+LocalIndex: ensure_index_exists at L:/projects/index/development/company
+query: name:or
+stored_fields: 
+LocalIndex: ensure_index_exists at L:/projects/index/development/category
+LocalIndex: ensure_index_exists at L:/projects/index/development/category
+LocalIndex: ensure_index_exists at L:/projects/index/development/category
+query: name:or
+stored_fields: 
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+query: name:or
+stored_fields: 
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand
+LocalIndex: ensure_index_exists at L:/projects/index/development/brand

@@ -1,0 +1,29 @@
+<h1>Проект</h1>
+<% form_tag(:controller => "/master_login", :action => "login") do %>
+  <table>
+    <tr>
+      <td class="master_label">
+        <label for="master_login"><%='Имя'%></label>
+      </td>
+      <td class="master_field">
+        <%= text_field_tag :master_login, params[:master_login] %>
+      </td>
+    </tr>
+    <tr>
+      <td class="master_label">
+        <label for="password"><%= 'Пароль'%></label>
+      </td>
+      <td class="master_field">
+        <%= password_field_tag :master_password, '' %>
+      </td>
+    </tr>
+    <tr>
+      <td class="master_label">
+        &nbsp;
+      </td>
+      <td class="master_field" align="right">
+        <%= submit_tag 'Вход' %>
+      </td>
+    </tr>
+  </table>
+<% end %>

@@ -1,0 +1,35 @@
+<h1> Компании </h1>
+<table class="data">
+  <tr>
+    <th class="data"><%= sortable 'name', 'Название' %></th>
+    <th class="data"><%= sortable 'company_comment', 'Описание' %></th>
+    <th class="data"><%= sortable 'city_id','Город' %></th>
+    <th class="data"> Дата создания</th>
+    <th class="data"> Действия </th>
+  </tr>
+<% for company in @companies %>
+  <tr>
+    <td class="data"><%=h company.name %></td>
+    <td class="data"><%=h company.company_comment %></td>
+    <td class="data">
+ 		<% company.address_by_dates.map(&:district).map(&:city).each do |e|%>
+   	  	<%=h e.name%>
+    <% end %>
+    	
+    </td>
+    
+    <td class="data"><%= create_update_info company, '<br/>' %></td>
+    <td class="data">
+      <%= link_to 'Редактировать', :action => 'edit', :id => company %>
+      <%= link_to 'Удалить', { :action => 'destroy', :id => company }, :confirm => 'Вы уверены?', :method => :post %>
+    </td>
+  </tr>
+<% end %>
+</table>
+<br />
+  <p>
+    <%= link_to 'Добавить новую компанию', :action => 'new' %>
+  </p>
+<a href="/admin/company/upload"> Загрузить CSV файл со списком компаний </a>
+<br/>
+ 

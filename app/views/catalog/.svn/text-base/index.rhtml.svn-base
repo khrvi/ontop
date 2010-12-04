@@ -1,0 +1,33 @@
+<div class="content-title"><a href=""> Каталог товаров и услуг </a></div>
+<br>
+<div>
+<table width="100%" cellspacing="1" cellpadding="1" border="0">
+  <tr>
+    <td width="50%" style="vertical-align:top;">
+  		<div id="companies">
+  		   <%= render :partial => 'shared/table', :locals => {:width => '100%',
+    						 :name => "catalog_field",
+    						 :partial => "/catalog/companies",
+    						 :title => "Компании:",
+    						 :hash => {} } %>
+	    </div>
+    </td>
+    <td width="50%" style="vertical-align:top;">
+		<div id="categories">
+        	   <%= render :partial => 'shared/table', :locals => {:width => '100%',
+    						 :name => "category_field",
+    						 :partial => "/catalog/categories",
+    						 :title => "Категории:",
+    						 :hash => {:list => nil, :all_links => nil} } %>
+        </div>
+    </td>
+  </tr>
+</table>  
+<div id="sort">
+</div>
+<div id="merchandises" >
+</div>
+<div style="clear:both"></div>
+</div>
+<br/>
+<br/>

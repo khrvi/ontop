@@ -1,0 +1,29 @@
+<h1> Категории </h1>
+<div>
+    <div style="width:200px;float:left">
+        <% @cities.each do |cont| %>
+            <% if @selected_company && @selected_company.city.id == cont.id %>
+                <% cont = @selected_company.city %>
+                <%= render :partial => 'companies', :locals => {:companies => cont.company, :city => cont} %>
+            <% else %>
+                <div id="city_<%= cont.id %>">
+                    <%= link_to_remote cont.name, {:url => {:action => 'cities', :city_id => cont.id}},
+                            {:class => 'h2_link', :complete => "set_internal_dialog_position()"} %>
+                    <p>
+                </div>
+            <% end %>
+        <% end %>
+    </div>
+    <div id="categories" style="float:left">
+        <% if @selected_city_id %>
+            <%= render :partial => 'categories_outer', :locals => {:root => @selected_city, :depth => 0} %>
+        <% end %>
+    </div>
+    <div style="clear:both"></div>
+</div>
+<br/>
+<br/>
+<% if @valid_role %>
+    <a href="/admin/category/upload"> Upload the CSV file with a list of the categories </a>
+<% end %>
+<br/>

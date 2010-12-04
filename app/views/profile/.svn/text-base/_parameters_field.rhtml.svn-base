@@ -1,0 +1,16 @@
+<div id="list">
+    <% 0.upto(@count-1) do |a| %>
+        <br/>
+        Наименование характеристики
+        <br/>
+        <%= text_field 'category', 'name_' + a.to_s, :size => 30, :value => h(@array_names[a]) %>
+        <br/>
+        Описание характеристики
+        <br/>
+        <%= text_area 'category', 'desc_' + a.to_s, {:style => 'width:100%; height:50px;', :value => h(@array_desc[a])} %>
+        <br/>
+    <% end %>
+    <%= link_to_remote 'Добавить характеристику', :url => {:action => 'add_param', :count => @count, :category => @category_id} %>
+    <input id="count1" type="hidden" value="<%= h @count %>" name="count1"/>
+    <input id="category1" type="hidden" value="<%= h @category_id %>" name="category1"/>
+</div>

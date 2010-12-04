@@ -1,0 +1,20 @@
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody>
+    <tr>
+      <td class="pgimage">
+        <% unless merchandise.albums.empty? %>
+          <%= picture_tag merchandise.albums.first.picture , false %>
+        <% else %>
+          <%= image_tag "noimage.jpg" %>
+        <% end%>
+      </td>
+    </tr>
+    <tr>
+      <td class="pgdescr">
+        <div class="pgname">
+          <%= link_to h(merchandise.name), :controller => "search",:action => 'show_merchandise', :id => merchandise.id %>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

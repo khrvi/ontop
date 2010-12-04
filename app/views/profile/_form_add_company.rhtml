@@ -1,0 +1,82 @@
+<%= error_messages_for 'company' %>
+<div id="a_tabbar" class="dhtmlxTabBar" imgpath="/images/tab_img/" style="width:700px; height:300px;" skinColors="#F8F2EE,#DFC3AE">
+    <div id="a1" name="Общее" style="width:600px;height:220px;">
+        <br/>
+        <br/>
+        <table>
+            <tr>
+                <td><h4> Название </h4></td>
+                <td><%= text_field 'company', 'name', :size => 80 %></td>
+            </tr>
+            <tr>
+                <td><h4> Сокращённое название </h4></td>
+                <td><%= text_field 'company', 'custom_name', :size => 20 %></td>
+            <tr>
+                <td><h4> Телефон </h4></td>
+                <td><%= text_field 'company', 'tel', :size => 80 %></td>
+            </tr>
+            <tr>
+                <td><h4> Факс </h4></td>
+                <td><%= text_field 'company', 'fax' %></td>
+            </tr>
+            <tr>
+                <td><h4> Email </h4></td>
+                <td><%= text_field 'company', 'email' %></td>
+            </tr>
+            <tr>
+                <td><h4> URL сайта компании </h4></td>
+                <td><%= text_field 'company', 'url' %></td>
+            </tr>
+        </table>
+        <% unless params[:user_id] %>
+            <input id="company[actor_id]" type="hidden" value="<%= h @company.actor_id %>" name="company[actor_id]"/>
+        <% else %>
+            <input id="company[actor_id]" type="hidden" value="<%= User.find(params[:user_id]).actor_id %>" name="company[actor_id]"/>
+        <% end %>
+    </div>
+
+    <div id="s2" name="Адрес" style="width:600px;height:220px;">
+        <div style="width:width:660px;height:220px;margin:20px;">
+            <table cellspacing="5">
+                <% @company.address_by_dates.each do |ad| %>
+                    <% obj_id = 'address_by_date_' + ad.id.to_s %>
+                    <%= render :partial => '/shared/address_by_date', :locals => {:address => ad.id, :obj_id => obj_id} %>
+                    <tr>
+                        <td colspan="2">
+                            <hr>
+                        </td>
+                    </tr>
+                <% end %>
+                <%= render :partial => '/shared/address_by_date', :locals => {:address => nil, :obj_id => 'address_by_date_0'} %>
+            </table>
+        </div>
+    </div>
+
+    <div id="a3" name="Описание" style="width:660px;height:220px;margin:20px;">
+        <%= text_area 'company', 'company_comment', {:style => 'width:640px; height:200px;'} %>
+    </div>
+
+    <div id="a4" name="Изображения" style="width:660px;height:220px;margin:20px;">
+        <table>
+            <tr>
+                <td> Загрузка фотографий</td>
+                <td colspan="3">
+                    <%= render :partial => '/shared/image_upload' %>
+                </td>
+            </tr>
+            <tr>
+                <td> Изображения</td>
+                <td>
+                    <% @company.albums.each do |pb| %>
+                        <%= picture_tag pb.picture, false %>
+                        <%= link_to 'Удалить', { :action => 'delete_picture', :id => pb.picture_id, :company_id => @company.id }, :confirm => 'Вы уверены?', :method => :post %>
+                        <br/>
+                    <% end %>
+                </td>
+                <td colspan="2">&nbsp;</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+

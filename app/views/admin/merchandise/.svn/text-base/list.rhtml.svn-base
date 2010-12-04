@@ -1,0 +1,14 @@
+<h3><%= 'Выберите категорию товара:' %></h3>
+<%= render :partial => '/admin/category/categories', :locals => {:root => nil, :depth => 0} %>
+
+<br/>
+
+<h1><%= 'Товары' %></h1>
+<div id="merchandises" >
+</div>
+<%= link_to 'Новый товар', :action => 'new' %>
+
+<br/>
+<a href="/admin/merchandise/upload"><%= 'Загрузить список товаров через CSV файл ' %></a>
+<br/>
+

@@ -1,0 +1,46 @@
+<table width="50%">
+  <tr>
+    <td>
+      <table width="200px" border="0">
+        <% if create_new_mer %>
+          <% column = MerchandiseColumnName.find_all_by_category_id(category_id) %>
+        <% else %>
+          <% column = MerchandiseColumnName.find_all_by_category_id(@merchandise.category_id) %>
+        <% end %>
+        <% names = column.map(&:column_name) %>
+        <% column.each do |q| %>
+          <tr>
+            <td class="data" valign="top">
+              <%= h q.column_name %>
+            </td>
+          </tr>
+        <% end %>
+      </table>
+    </td>
+    <td style="vertical-align:top;">
+      <table border="0" width="100px">
+        <% if create_new_mer %>
+          <% column.each do |q| %>
+            <tr class="data" valign="top">
+              <td class="data">
+                <input type="text" id="<%= h q.column_name %>" name="<%= h q.column_name %>" size="20" value=""/>
+              </td>
+            </tr>
+          <% end %>
+        <% else %>
+          <% @merchandise.merchandise_column_descs.each_with_index do |q,index| %>
+            <tr class="data" valign="top">
+              <td class="data">
+                <% unless first_time %>
+                  <%= h q.column_value %>
+                <% else %>
+                  <input type="text" id="<%= h names[index] %>" name="<%= h names[index] %>" size="20" value="<%= h q.column_value %>"/>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        <% end %>
+      </table>
+    </td>
+  </tr>
+</table>

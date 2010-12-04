@@ -1,0 +1,61 @@
+<% form_for :user, :url => {:controller => 'users', :action => :create} do |f| -%>
+  <p><label for="login">Логин</label><br/>
+  <%= f.text_field :login %></p>
+  <% unless params[:company_id].nil? %>
+    <p>
+      <%= check_box_tag 'user_role', '1' %> <%= 'Пользователь' %>
+      <%= check_box_tag 'datamanager_role', '1' %> <%= 'Менеджер данных' %>
+    </p>
+  <% end %>
+
+  <p><label for="email">Email</label><br/>
+  <%= f.text_field :email %></p>
+  <table>
+    <tr>
+      <td>
+        <label for="password">Пароль</label>
+      </td>
+      <td>
+        <div style="width: 100px;">
+          <div id="mypassword_text" style="font-size: 12px;"></div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td width="250px">
+        <%= f.password_field :password, { :onkeyup => "getPasswordStrength(this.value, 'mypassword',user_login.value);"} %>
+      </td>
+      <td>
+        <div class="profil fl mb5" style="background:url(/images/ill_profile_compl_inactive.gif); width:219px; height:12px;  margin-top: 0;">
+          <div id="mypassword_bar" style="width: 0px; overflow:hidden;">
+            <img id="img" src="/images/ill_profile_compl_active_copy_r.gif"  alt="Безопасность пароля" title="Безопасность пароля" />
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <p>
+  </p>
+  <p>
+    <label for="password_confirmation">Подтверждение пароля</label>
+    <br/>
+    <%= f.password_field :password_confirmation %>
+    <br/>
+  </p>
+  <p>
+    <div id="cap_up">
+      <%= show_simple_captcha( :label => 'Пожалуйста введите код, представленный на картинке', :image_style => "simply_red", :distortion => "medium" )  %>
+    </div>
+    <br/>
+  </p>
+  <p>
+    Если вы не можете прочитать код на картинке, нажмите
+    <%= link_to_remote 'сдесь', :url => { :action => "update_div" } %>
+    чтобы сгенерировать новый код
+  </p>
+  <p>
+    <%= submit_tag "Регистрировать" -%>
+  </p>
+  <input id="company_id" type="hidden" value="<%= params[:company_id] %>" name="company_id"/>
+<% end -%>
+

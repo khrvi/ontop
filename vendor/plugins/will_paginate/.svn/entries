@@ -1,0 +1,94 @@
+8
+
+dir
+164
+http://svn2.assembla.com/svn/uznaj/vendor/plugins/will_paginate
+http://svn2.assembla.com/svn/uznaj
+
+
+
+2008-09-03T19:48:45.644792Z
+137
+khrvi
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+38686702-15cf-42e4-a595-3071df8bf5ea
+
+test
+dir
+
+Rakefile
+file
+
+
+
+
+2008-01-29T02:33:36.699088Z
+6f6dcd3ecdfe871b67e42e0e69ef15cc
+2008-09-03T19:10:50.541711Z
+132
+khrvi
+
+LICENSE
+file
+
+
+
+
+2007-08-02T16:50:25.862328Z
+4f07f0b985927be06dcc54950ba5a1b9
+2008-09-03T19:10:50.541711Z
+132
+khrvi
+
+init.rb
+file
+
+
+
+
+2008-01-27T17:41:08.630814Z
+11da432e17f263baaf85a892a3a33c1c
+2008-09-03T19:10:50.541711Z
+132
+khrvi
+
+lib
+dir
+
+install.rb
+file
+
+
+
+
+2008-04-03T15:18:25.444959Z
+1c88d6bc27aa809cd6ef26543c18b1e6
+2008-09-03T19:10:50.541711Z
+132
+khrvi
+
+README
+file
+
+
+
+
+2008-04-03T15:18:25.444959Z
+c5c258a4b3c3b9b0523d2c3b0b8e4c3c
+2008-09-03T19:10:50.541711Z
+132
+khrvi
+

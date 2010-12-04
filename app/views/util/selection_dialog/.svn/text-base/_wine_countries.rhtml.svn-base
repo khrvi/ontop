@@ -1,0 +1,25 @@
+<% all_cities.each do |cont| %>
+  <% if selected_city && selected_city.id == cont.id %>
+    <span class="span_h2"><%= cont.name %></span>
+    <div>
+      <div style="float:left;width:20px;height:10px;"></div>
+      <div style="float:left;">
+        <p>
+          <% cont.companies.each do |c| %>
+            <% txt = if selected_country && selected_country.id == c.id then '<b>' + c.name + '</b>' else c.name end %>
+            <%= link_to_remote txt, :url => {:action => 'categories_for_country', :country_id => c.id, :mode => mode,
+                        :select_controller => select_controller, :select_action => select_action, :answer_ajax => answer_ajax,:name_combo => name_combo},
+                  :complete => "set_internal_dialog_position()" %> <br>
+          <% end %>
+        </p>
+      </div>
+      <div style="clear:both"></div>
+    </div>
+  <% else %>
+    <div id="city_<%= cont.id %>">
+      <%= link_to_remote cont.name, {:url => {:action => 'countries', :city_id => cont.id, :selected_category => selected_category, :mode => mode, :select_controller => select_controller, :select_action => select_action, :answer_ajax => answer_ajax,:name_combo => name_combo}},
+            {:class => 'h2_link', :complete => "set_internal_dialog_position()"} %>
+      <p>
+    </div>
+  <% end %>
+<% end %>

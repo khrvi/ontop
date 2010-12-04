@@ -1,0 +1,46 @@
+8
+
+dir
+164
+http://svn2.assembla.com/svn/uznaj/vendor/plugins
+http://svn2.assembla.com/svn/uznaj
+
+
+
+2008-09-03T19:49:00.013906Z
+138
+khrvi
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+38686702-15cf-42e4-a595-3071df8bf5ea
+
+open_flash_chart
+dir
+
+will_paginate
+dir
+
+authorization
+dir
+
+restful_authentication
+dir
+
+globalize
+dir
+
+simple_captcha
+dir
+

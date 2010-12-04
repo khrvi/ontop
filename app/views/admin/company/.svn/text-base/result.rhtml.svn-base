@@ -1,0 +1,123 @@
+<% form_tag({ :action=>'save_all'},:name => 'country_upload', :multipart => true) do %>
+  <% cities = {} %>
+  <% City.find(:all).each {|c| cities[c.name] = c.id} %>
+   
+  <% countries = {} %>
+  <% Company.find(:all).each {|c| countries[c.name] = c.id} %>
+
+  <% list = {} %>
+  <% str = params[:temp_hash] %>
+  <% data = str.split(",")%>
+  <% name_combo_string = "" %>  
+  <% list_countries_string = "" %> 
+  <% unless params[:tmp_file].blank? %>
+  
+    <% @r = (data.length)/2 %> 
+  
+    <% a = 0 %>
+ 
+    <% flag = 0 %>
+    <% mem = 0 %>
+    <%   listN = "" %>
+    <%   listCountries = "" %>
+    <%   con = "" %>
+    <% k = 0 %>
+    <% t = 0 %>
+    <% @r.times do |i| %>
+      <% data[i*2].strip! %>
+	  <%  unless countries.has_key? data[i*2] %>
+      
+        <% if data[i*2+1]== "nil" %>
+	      <%	if  flag==1  and mem==1 and k > 1 and t==0%>
+	        <%  listN<<"_" + (a-1).to_s %>		
+			<h4><%= "The city " + con +  " not found in the database. Please select a new city for country " + listCountries %></h4>
+			<p><label for="company_city_id"> <%= 'Kontinent' %>: </label>
+			<%= select 'company', "city_id" + listN, City.for_select, { :include_blank => true } %></p>
+			<% name_combo_string << ',' + "company_city_id" + listN %>
+			<% list_countries_string << listCountries + ', ' %>
+			<% flag = 0 %>
+			<% mem = 0 %>
+			<% t = 1 %>   	
+		  <% end %>
+	    
+	      <h4><%= "The city not define for the country " + data[i*2] +  " .Please select a city for country" %></h4>
+	      <p><label for="company_city_id"> <%= 'Kontinent' %>: </label>
+  	      <%= select 'company', "city_id_" + a.to_s, City.for_select, { :include_blank => true } %></p>
+		  <% name_combo_string << ',' + "company_city_id_" + a.to_s  %>
+		  <% list_countries_string << listCountries + ', ' %>	  
+	    <% else %>
+          
+          <% if k == 0 %>
+	        <% str = data[i*2 + 1] %>
+	        <% con = data[i*2] %>
+	        <% listN <<"_" + a.to_s %>
+	      <% end %>
+	
+	      <% if data[i*2 + 1] == str %> 
+		   
+	        <% if flag==0 %>
+	          <%  listCountries << " " + data[i*2] %>
+		      <%   con = str %>
+		      <%   flag = 1 %>
+		      <% k = k + 1 %>
+		      <% t = 0 %>   
+		      <% mem = 1 %>
+			<%  else %>
+			  <%  listCountries << " " + data[i*2] %>
+			  <%   con = str %>
+			  <% k = k + 1 %>   
+			  <% mem = 1 %>
+			  <% t = 0 %>   
+			<% end %>
+			        
+		  <% else %>
+			
+		    <%	if  flag==1  and mem==1 and k > 1 and t==0%>
+		      <%  listN<<"_" + (a-1).to_s %>		
+		    <% end %>
+			
+			<%	if  mem==1 or k<1%>
+		      <h4><%= "The city " + con +  " not found in the database. Please select a new city for country " + listCountries %></h4>
+			  <p><label for="company_city_id"> <%= 'Kontinent' %>: </label>
+			  <%= select 'company', "city_id" + listN, City.for_select, { :include_blank => true } %></p>
+			  <% name_combo_string << ',' + "company_city_id" + listN %>
+			  <% list_countries_string << listCountries + ', ' %>
+			<% end %>
+			
+			<% flag = 0 %>
+			<% listCountries = " " + data[i*2 ] %>
+			<%  listN="_" + (a).to_s %>
+			<%   str = data[i*2 + 1] %>
+			<%   con = str %>
+			<% mem = 1 %>
+			<% k = k + 1 %>
+			<% t = 1 %>   	 
+		  <% end %> 	
+        <%end%>
+	   
+	    <% a = a + 1 %>
+      <% end %> 
+ 
+    <% end %> 
+
+    <%	if  flag==1 or mem ==1 %>
+      <%	if  t == 0  and k > 1 %>
+        <%  listN<<"_" + (k-1).to_s %>
+      <%	end  %>
+
+      <h4><%= "The city " + con +  " not found in the database. Please select a new city for country " + listCountries %></h4>
+	  <p><label for="company_city_id"> <%= 'Kontinent' %>: </label>
+	  <%= select 'company', "city_id" + listN, City.for_select, { :include_blank => true } %></p>
+	  <%name_combo_string << ',' + "company_city_id" + listN %>
+	  <% list_countries_string << listCountries + ', ' %>
+    <%	end  %>
+  <%end%>
+   
+  <input id="max" type="hidden" value="<%= @r %>" name="max"/>
+  <input id="file" type="hidden" value="<%= params[:tmp_file] %>" name="file"/>
+  
+  <input TYPE=button   OnClick='EmptyField("<%=name_combo_string%>","<%=list_countries_string%>",4);'  VALUE="Save">
+<% end %>
+<br/>
+<a href="/admin/company/upload" onclick="<%= remote_function(:url => { :controller => 'country',:action => 'del_file'} , :file => params[:tmp_file] ) %> ">
+<%= 'Back' %></a>

@@ -1,0 +1,45 @@
+<h1>Административные функции</h1>
+<div>
+    <div style="float:left;">
+        <h2> Пользователи </h2>
+        <ul>
+            <li><%= link_to 'Новый пользователь', :controller => '/admin/person', :action => 'new' %></li>
+            <li><%= link_to 'Список', :controller => '/admin/person', :action => 'index' %></li>
+        </ul>
+        <h2> Быстрый ввод </h2>
+        <ul>
+        </ul>
+        <h2> Брэнды </h2>
+        <ul>
+            <li><%= link_to 'Список', :controller => '/brand', :action => 'index' %></li>
+            <li><%= link_to 'Новый брэнд', :controller => '/brand', :action => 'new' %></li>
+            <li><%= link_to 'Загрузить CSV файл', :controller => '/brand', :action => 'upload' %></li>
+        </ul>
+        <% if @valid_role %>
+            <h2> Компании </h2>
+            <ul>
+                <li><%= link_to 'Список', :controller => '/admin/company', :action => 'index' %></li>
+                <li><%= link_to 'Новая компания', :controller => '/admin/company', :action => 'new' %></li>
+                <li><%= link_to 'Загрузить CSV файл', :controller => '/admin/company', :action => 'upload' %></li>
+            </ul>
+        <% end %>
+    </div>
+    <div style="float:left;margin-left:40px;">
+        <h2> Каталог </h2>
+        <ul>
+            <li><%= link_to 'Загрузить CSV файл', :controller => '/admin/category', :action => 'upload' %></li>
+        </ul>
+        <h2> Список товаров </h2>
+        <ul>
+            <li><%= link_to 'Список', :controller => '/admin/merchandise', :action => 'index' %></li>
+            <li><%= link_to 'Новый товар', :controller => '/admin/merchandise', :action => 'new' %></li>
+            <li><%= link_to 'Загрузить CSV файл', :controller => '/admin/merchandise', :action => 'upload' %></li>
+        </ul>
+        <h2> Статистика </h2>
+        <ul>
+            <li><%= link_to 'Общая', :controller => '/admin/statistics', :action => 'index' %></li>
+            <li><%= link_to 'Пользователи', :controller => '/admin/statistics', :action => 'login' %></li>
+        </ul>
+    </div>
+    <div style="clear:both"></div>
+</div>

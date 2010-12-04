@@ -1,0 +1,52 @@
+8
+
+dir
+164
+http://svn2.assembla.com/svn/uznaj/vendor/rails/activerecord/test/connections/native_sqlite3
+http://svn2.assembla.com/svn/uznaj
+
+
+
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+38686702-15cf-42e4-a595-3071df8bf5ea
+
+in_memory_connection.rb
+file
+
+
+
+
+2008-09-03T19:33:22.828125Z
+cd51af0eb467e9c258f5fa62a9f3bd36
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+
+connection.rb
+file
+
+
+
+
+2008-09-03T19:33:22.843750Z
+aafeeeee4b4939b74366fcd8116feb41
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+

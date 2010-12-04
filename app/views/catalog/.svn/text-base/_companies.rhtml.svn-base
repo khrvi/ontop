@@ -1,0 +1,30 @@
+<% c = 0 %>
+<hr>
+Английский алфавит
+<% count = @alph_array.length %>
+<h2><%=  @alph_array[c] %></h2>
+<% a = 0 %>
+<% @list_names.each do |r| %>
+  <% comp_id = Company.find_by_name(r).id %>
+  <% if @alph_array[c]  %>
+    <% unless @alph_array[c].index(r[0]) %>
+      <% c = c+1 %>
+      <% if count > c %>
+        <h2><%=  @alph_array[c] %></h2>
+      <% else %>
+        <hr>
+        Русский алфавит
+      <% end %>
+    <% end %>
+    <% if count > c %>
+      <%= link_to_remote r,  :url => {:action => 'change_company', :company_id => comp_id }%>
+    <% end %>
+  <% end %>
+  <% if count <= c %>
+    <!-- Russian alphabet-->
+    <h2><%=  @rus_alph_array[a] %></h2>
+    <% a += 1%>
+    <%= link_to_remote  r,  :url => {:action => 'change_company', :company_id => comp_id }%>
+  <% end%>
+  <br/>
+<% end %>

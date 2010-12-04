@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/uznaj/!svn/ver/3/vendor/plugins/authorization/generators/role_model/templates
+END
+unit_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/uznaj/!svn/ver/3/vendor/plugins/authorization/generators/role_model/templates/unit_test.rb
+END
+model.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/uznaj/!svn/ver/3/vendor/plugins/authorization/generators/role_model/templates/model.rb
+END
+fixtures.yml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/uznaj/!svn/ver/3/vendor/plugins/authorization/generators/role_model/templates/fixtures.yml
+END
+migration.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/uznaj/!svn/ver/3/vendor/plugins/authorization/generators/role_model/templates/migration.rb
+END

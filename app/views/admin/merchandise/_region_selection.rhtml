@@ -1,0 +1,16 @@
+<h4> <%= category_id ? category.full_name : "" %> </h4> 
+<input id="winery_category_id" type="hidden" value="<%=category_id%>" name="winery[category_id]"/>
+<input id="<%=name_combo%>" type="hidden" value="<%=category_id%>" name="<%=name_combo%>"/>
+<%= link_to_remote 'Выбрать',
+      :url => {
+          :controller => '/util/selection_dialog',
+          :action => 'select_one_category',
+          :select_controller => '/admin/winery',
+          :select_action => 'category_selected_winery',
+          :answer_ajax => answer_ajax,
+          :name_combo => name_combo
+      },
+      :complete => "set_internal_dialog_position();" %>
+<br/>
+      
+ 

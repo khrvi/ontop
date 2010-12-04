@@ -1,0 +1,52 @@
+8
+
+dir
+164
+http://svn2.assembla.com/svn/uznaj/vendor/rails/railties/lib/rails/plugin
+http://svn2.assembla.com/svn/uznaj
+
+
+
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+38686702-15cf-42e4-a595-3071df8bf5ea
+
+locator.rb
+file
+
+
+
+
+2008-09-03T19:34:59.953125Z
+528c3d5ff7cd353b5d404b4c7d84db6c
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+
+loader.rb
+file
+
+
+
+
+2008-09-03T19:34:59.984375Z
+ee3ea5996c9bcc9512a503f3df03e94f
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+

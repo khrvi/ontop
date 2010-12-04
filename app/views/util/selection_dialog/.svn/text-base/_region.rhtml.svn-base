@@ -1,0 +1,31 @@
+
+<% root.child_categories.each do |r| %>
+  <div>
+    <div style="float:left;width:<%= 20 * depth %>px;height:10px"></div>
+    <div style="float:left;">
+      <% if selected_category != nil && selected_category.id == r.id
+           str = '<b>' + r.name + '</b>'
+         else
+           str = r.name
+         end
+      %>
+      <% if mode == :one_category %>
+        <% if answer_ajax %>
+          <%= link_to_remote str, :url => {:controller => select_controller, :action => select_action, :answer_ajax => answer_ajax, :category_id => r.id ,:name_combo => name_combo}%>
+        <% else %>
+          <%= link_to str, :controller => select_controller, :action => select_action, :answer_ajax => answer_ajax, :category_id => r.id %>
+        <% end %>
+      <% elsif mode == :winery || mode == :brand %>
+        <% txt = if selected_category && selected_category.id == r.id then '<b>' + r.name + '</b>' else r.name end %>
+        <%= link_to_remote txt, :url => {:action => 'merchandises_for_category', :category_id => r.id, :mode => mode,
+                        :select_controller => select_controller, :select_action => select_action, :answer_ajax => answer_ajax},
+                  :complete => "set_internal_dialog_position()" %> <br>
+      <% else %>
+        <%= h str %>
+      <% end %>
+    </div>
+    <div style="clear:both"></div>
+  </div>
+
+  <%= render :partial => 'category', :locals => {:root => r, :selected_category => selected_category, :depth => depth + 1, :mode => mode, :select_controller => select_controller, :select_action => select_action, :answer_ajax => answer_ajax,:name_combo => name_combo} %>
+<% end %>

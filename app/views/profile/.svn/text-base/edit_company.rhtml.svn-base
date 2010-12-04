@@ -1,0 +1,7 @@
+<div class="content-title"><a href=""><%= 'Редактирование данных предприятия' %></a></div>
+<br>
+<% form_tag :action => 'update_comp', :id => @company, :user_id => params[:user_id] do %>
+  <%= render :partial => 'form_add_company' %>
+  <%= submit_tag 'Сохранить' %>
+<% end %>
+<%= link_to 'Назад', :action => 'show' %>

@@ -1,0 +1,34 @@
+<h1> Редактирование категории </h1>
+<% form_tag :action => 'save' do %>
+    <%= hidden_field_tag 'company_id', @category.company_id %>
+    <%= hidden_field_tag 'parent_category_id', @category.parent_category_id %>
+    <%= hidden_field_tag 'id', @category.id %>
+    <div id="a_tabbar" class="dhtmlxTabBar" imgpath="/images/tab_img/" style="width:700px; height:520px;" skinColors="#F8F2EE,#DFC3AE">
+        <div id="a1" name="Category" style="width:600px;height:420px;">
+            <table width="100%">
+                <tr>
+                    <td valign="top"> Категория </td>
+                    <td><%= text_field_tag 'name', h(@category.name) %></td>
+                </tr>
+                <tr>
+                    <td> Родительская категория </td>
+                    <td><%= @category.parent_category_id ? h(@category.parent_category.name) : 'Root' %></td>
+                </tr>
+                <tr>
+                    <td> Компании</td>
+                    <td>
+                        <% @category.companies.each do |comp| %>
+                            <%= h comp.name %>
+                            <br/>
+                        <% end %>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top"> Описание </td>
+                    <td><%= text_area_tag 'category_comment', h(@category.category_comment), :style => 'width:400px;height:260px;' %></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <%= submit_tag 'Сохранить' %>
+<% end %>

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/uznaj/!svn/ver/107/app/helpers/admin
+END
+merchandise_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/uznaj/!svn/ver/7/app/helpers/admin/merchandise_helper.rb
+END
+main_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/uznaj/!svn/ver/34/app/helpers/admin/main_helper.rb
+END
+brand_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/uznaj/!svn/ver/1/app/helpers/admin/brand_helper.rb
+END
+company_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/uznaj/!svn/ver/107/app/helpers/admin/company_helper.rb
+END
+person_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/uznaj/!svn/ver/1/app/helpers/admin/person_helper.rb
+END
+statistics_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/uznaj/!svn/ver/1/app/helpers/admin/statistics_helper.rb
+END
+category_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/uznaj/!svn/ver/7/app/helpers/admin/category_helper.rb
+END
+quick_entry_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/uznaj/!svn/ver/64/app/helpers/admin/quick_entry_helper.rb
+END

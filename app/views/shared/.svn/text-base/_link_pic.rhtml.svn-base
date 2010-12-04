@@ -1,0 +1,1 @@
+<%= link_to_remote image_tag(pic, :style => 'border:none;'), :url => {:controller => "/catalog",:action => 'list_up_down', :id => item, :flag => fl, :contr => contr} %>

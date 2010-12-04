@@ -1,0 +1,3 @@
+<%= link_to 'Добавить категории товаров',:controller => '/profile', :action => 'add_category', :user_id => @user_id %>
+<br>
+<br>

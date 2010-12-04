@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/uznaj/!svn/ver/55/app/views/util/selection_dialog
+END
+_wine_countries.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/uznaj/!svn/ver/7/app/views/util/selection_dialog/_wine_countries.rhtml
+END
+_dialog.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/uznaj/!svn/ver/55/app/views/util/selection_dialog/_dialog.rhtml
+END
+_cities_container.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/uznaj/!svn/ver/55/app/views/util/selection_dialog/_cities_container.rhtml
+END
+_region.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/uznaj/!svn/ver/28/app/views/util/selection_dialog/_region.rhtml
+END
+_categories_container.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/uznaj/!svn/ver/55/app/views/util/selection_dialog/_categories_container.rhtml
+END

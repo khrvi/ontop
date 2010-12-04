@@ -1,0 +1,179 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/uznaj/!svn/ver/164/app/views/profile
+END
+_pending_todos.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/uznaj/!svn/ver/49/app/views/profile/_pending_todos.rhtml
+END
+_actions_show_category.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/uznaj/!svn/ver/55/app/views/profile/_actions_show_category.rhtml
+END
+_actions_category.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/uznaj/!svn/ver/144/app/views/profile/_actions_category.rhtml
+END
+_drag_drop_category.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/uznaj/!svn/ver/50/app/views/profile/_drag_drop_category.rhtml
+END
+_actions_user.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/uznaj/!svn/ver/164/app/views/profile/_actions_user.rhtml
+END
+category_param.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/uznaj/!svn/ver/55/app/views/profile/category_param.rhtml
+END
+_category_create.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/uznaj/!svn/ver/144/app/views/profile/_category_create.rhtml
+END
+_form_add_company.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/uznaj/!svn/ver/161/app/views/profile/_form_add_company.rhtml
+END
+_actions_merchandise.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/uznaj/!svn/ver/144/app/views/profile/_actions_merchandise.rhtml
+END
+_parameters_field.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/uznaj/!svn/ver/144/app/views/profile/_parameters_field.rhtml
+END
+_actions_company_users.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/uznaj/!svn/ver/164/app/views/profile/_actions_company_users.rhtml
+END
+_user_data.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/uznaj/!svn/ver/164/app/views/profile/_user_data.rhtml
+END
+change_password.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/uznaj/!svn/ver/55/app/views/profile/change_password.rhtml
+END
+_description_company.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/uznaj/!svn/ver/144/app/views/profile/_description_company.rhtml
+END
+form_add_category.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/uznaj/!svn/ver/49/app/views/profile/form_add_category.rhtml
+END
+add_parameters.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/uznaj/!svn/ver/55/app/views/profile/add_parameters.rhtml
+END
+edit_company.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/uznaj/!svn/ver/55/app/views/profile/edit_company.rhtml
+END
+edit_person.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/uznaj/!svn/ver/55/app/views/profile/edit_person.rhtml
+END
+add_company.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/uznaj/!svn/ver/55/app/views/profile/add_company.rhtml
+END
+add_person.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/uznaj/!svn/ver/55/app/views/profile/add_person.rhtml
+END
+_child_category.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/uznaj/!svn/ver/144/app/views/profile/_child_category.rhtml
+END
+_log.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/uznaj/!svn/ver/144/app/views/profile/_log.rhtml
+END
+show.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/uznaj/!svn/ver/164/app/views/profile/show.rhtml
+END
+_completed_todos.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/uznaj/!svn/ver/144/app/views/profile/_completed_todos.rhtml
+END
+_edit.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/uznaj/!svn/ver/161/app/views/profile/_edit.rhtml
+END
+upload.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/uznaj/!svn/ver/55/app/views/profile/upload.rhtml
+END
+add_category.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/uznaj/!svn/ver/55/app/views/profile/add_category.rhtml
+END
+_company_users.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/uznaj/!svn/ver/144/app/views/profile/_company_users.rhtml
+END
+_sort.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/uznaj/!svn/ver/45/app/views/profile/_sort.rhtml
+END

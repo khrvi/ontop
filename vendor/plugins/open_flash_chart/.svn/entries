@@ -1,0 +1,134 @@
+8
+
+dir
+164
+http://svn2.assembla.com/svn/uznaj/vendor/plugins/open_flash_chart
+http://svn2.assembla.com/svn/uznaj
+
+
+
+2008-09-03T19:49:00.013906Z
+138
+khrvi
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+38686702-15cf-42e4-a595-3071df8bf5ea
+
+test
+dir
+
+swfobject.js
+file
+
+
+
+
+2008-08-30T14:26:42.859375Z
+fc36c10f8baf6c90e6eab2d0a761a0b2
+2008-09-03T19:10:50.541711Z
+132
+khrvi
+
+Rakefile
+file
+
+
+
+
+2008-08-30T14:26:37.671875Z
+a2728bc657b56d9edfbf997d2555a66a
+2008-09-03T19:10:50.541711Z
+132
+khrvi
+
+tasks
+dir
+
+init.rb
+file
+
+
+
+
+2008-08-30T14:26:38.125000Z
+5a80e61a4d55611658b5d1d3b8c90511
+2008-09-03T19:10:50.541711Z
+132
+khrvi
+
+lib
+dir
+
+install.rb
+file
+
+
+
+
+2008-08-30T14:26:38.546875Z
+cbe738c10eba4ae2da8c6859c9723e44
+2008-09-03T19:10:50.541711Z
+132
+khrvi
+
+MIT-LICENSE
+file
+
+
+
+
+2008-08-30T14:26:36.796875Z
+4134181dcfd988b8889b530d15070637
+2008-09-03T19:10:50.541711Z
+132
+khrvi
+
+open-flash-chart.swf
+file
+
+
+
+
+2008-08-30T14:26:41.984375Z
+7a74d3d615135b674c63a0af6ce9420e
+2008-09-03T19:10:50.541711Z
+132
+khrvi
+has-props
+
+uninstall.rb
+file
+
+
+
+
+2008-08-30T14:26:45.015625Z
+2a5fc883fe7f8dfe22ced24643d59ad4
+2008-09-03T19:10:50.541711Z
+132
+khrvi
+
+README
+file
+
+
+
+
+2008-08-30T14:26:37.234375Z
+fd82d0a53d208b570bd5de140ed9fd0e
+2008-09-03T19:10:50.541711Z
+132
+khrvi
+

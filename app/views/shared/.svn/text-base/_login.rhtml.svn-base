@@ -1,0 +1,5 @@
+<% unless @user_logged_in #controller.current_user %>
+  <% form_tag(:controller => 'session', :action => 'create') do %>
+    <%= render(:partial => "shared/loginsub") %>
+  <% end %>
+<% end %>

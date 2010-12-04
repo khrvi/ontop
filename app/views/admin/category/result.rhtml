@@ -1,0 +1,35 @@
+<% form_tag({ :action=>'save_all'},:name => 'category_upload', :multipart => true) do %>
+ 
+  <% country_string = params[:country_array] %>
+  <% list_categories_string = params[:list_categories_array] %>
+  <% name_combo_string = params[:name_combo_array] %>
+ 
+  <% list_categories_array = list_categories_string.split(",") %> 
+  <% name_combo_array = name_combo_string.split(",") %>
+  <% country_array = country_string.split(",") %>
+  <% max = country_array.length %>
+   
+  <% max.times do |i|%>
+ 
+	<% if country_array[i] == 'nil' %>
+	  <h4><%= "The country not define for the category " + list_categories_array[i] +  " .Please select a country" %></h4>
+	  <p><label for="category_country_id"> <%= 'Country' %>: </label>
+	  <%= select 'category', name_combo_array[i], Company.for_select, { :include_blank => true } %></p>	 
+	 
+	<% else %>
+	  <h4><%= "The country " + country_array[i] +  " not found in the database. Please select a new country for category " + list_categories_array[i] %></h4>
+	  <p><label for="category_country_id"> <%= 'Country' %>: </label>
+	  <%= select 'category', name_combo_array[i], Company.for_select , { :include_blank => true }%></p>
+	 
+	<% end %>  
+  <% end %>
+  <input id="max" type="hidden" value="<%= params[:max] %>" name="max"/>
+  <input id="file" type="hidden" value="<%= params[:tmp_file] %>" name="file"/>
+  <br/>
+
+  <input TYPE=button   OnClick='EmptyField("<%=name_combo_string%>","<%=list_categories_string%>",1);'  VALUE="Save">
+<% end %>
+<br/>
+<a href="/admin/category/upload" onclick="<%= remote_function(:url => { :controller => 'category',:action => 'del_file'} , :file => params[:tmp_file] ) %> ">
+
+<%= 'Back' %></a>

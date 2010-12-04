@@ -1,0 +1,28 @@
+<div class="content-title"><a href="index.html">Просмотр и редактирование характеристик товара для выбранной категории</a></div>
+<br>
+<% form_tag({:controller => 'profile',:action => 'edit_category'}) do %>
+
+Выберите категорию
+<%= select 'category', "merchandises" , MerchandiseColumnName.for_select , { :include_blank => true }, {:onchange => 'view_cat();'} %>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<%= submit_tag 'Сохранить изменения' %>
+<br/>  
+<br/>      
+	<div id="add_param" style="float:left">
+	   <%= render :partial => 'shared/table', :locals => {:width => '100%',
+	    						 :name => "pr_field",
+	    						 :partial => "/profile/parameters_field",
+	    						 :title => "Характеристики товара:",
+	    						 :hash => {} } %> 
+	</div>
+<% end %>
+ 	
+	
+<script type="text/javascript">
+function view_cat() {
+  sel = document.getElementById('category_merchandises');
+  val = sel.value;
+  <%= remote_function :url => {:action => 'view_category'}, :with => "'id=' + val" %>  
+}
+
+</script>

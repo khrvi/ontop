@@ -1,0 +1,22 @@
+<table>
+<tr>
+  <td> <%= 'Город' %> </td>
+  <td><% a = obj_id + 'T_city_id' %>
+   <%= select obj_id + "T", 'city_id',City.for_select, {:include_blank => true },{:onchange => "copy('#{a}','#{obj_id}');"} %> </td>
+	
+</tr>
+<tr>
+  <td> <%= 'Район' %> </td>
+  <td> 
+  	<div id="<%= 'district_' + obj_id %>">
+  		<%= select obj_id, 'district_id1', District.select(nil), { :include_blank => true } %>
+  	</div>
+  </td>
+</tr>
+</table>
+ 
+
+<br/>
+
+  <input TYPE=button  OnClick="save('<%= obj_id + "_district_id1" %>','<%= obj_id %>');"  VALUE="Сохранить">
+  

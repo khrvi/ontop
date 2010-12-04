@@ -1,0 +1,16 @@
+<h1><%= 'Последние подключения' %></h1>
+<table class="data">
+  <tr>
+    <th class="data"> <%= 'Login' %> </th>
+    <th class="data"> <%= 'Дата' %> </th>
+    <th class="data"> <%= 'Тип' %> </th>
+  </tr>
+<% for stats_login in @stats_logins %>
+  <tr>
+    <td class="data"> <%= h stats_login.login %> </td>
+    <td class="data"> <%= short_datetime stats_login.login_at %> </td>
+    <td class="data"> <%= h stats_login.login_type %> </td>
+  </tr>
+<% end %>
+</table>
+

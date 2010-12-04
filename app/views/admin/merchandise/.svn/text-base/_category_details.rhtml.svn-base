@@ -1,0 +1,12 @@
+<input id="merchandise_category_id" type="hidden" value="<%=category_id%>" name="merchandise[category_id]"/>
+<%= if category_id then category.name else '' end %>
+
+<%= link_to_remote 'Выбрать категорию',
+      :url => {
+          :controller => '/util/selection_dialog',
+          :action => 'select_one_category',
+          :select_controller => '/admin/merchandise',
+          :select_action => 'category_selected',
+          :answer_ajax => answer_ajax
+      },
+      :complete => "set_internal_dialog_position();" %>

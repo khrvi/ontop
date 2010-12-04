@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/uznaj/!svn/ver/105/app/views/admin/person
+END
+list.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/uznaj/!svn/ver/105/app/views/admin/person/list.rhtml
+END
+_form.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/uznaj/!svn/ver/105/app/views/admin/person/_form.rhtml
+END
+edit.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/uznaj/!svn/ver/55/app/views/admin/person/edit.rhtml
+END
+new.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/uznaj/!svn/ver/45/app/views/admin/person/new.rhtml
+END

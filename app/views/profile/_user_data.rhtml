@@ -1,0 +1,31 @@
+<% if person = @current_user.actor.person %>
+	<% if (!person.first_name.blank? and !person.last_name.blank?) %>
+	    <table width ='100%' cellspacing="10">
+		  <tr>
+		    <td valign="top"> Имя: </td>
+		    <td valign="top"> <%=h person.first_name %> </td>
+		  </tr>
+		<tr>
+		    <td valign="top"> Фамилия: </td>
+		    <td valign="top"> <%=h person.last_name %> </td>
+		  </tr>
+		  <% unless person.position.blank? %>
+		  <tr>
+		    <td valign="top"> Должность: </td>
+		    <td valign="top"> <%=h person.position %> </td>
+		  </tr>
+		  <% end %>
+		</table>
+		<% @str = 'Редактировать' %>
+	<%else%>
+	  Введите пожалуйста личные данные пользователя
+	<br/>
+	<br/>
+	<% @str = 'Добавить личные данные' %>
+	<% end %>
+<% else %>
+	 Введите пожалуйста личные данные пользователя
+	<br/>
+	<br/>
+	<% @str = 'Добавить личные данные' %>
+<% end %>	

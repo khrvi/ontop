@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/uznaj/!svn/ver/145/test/functional
+END
+data_upload_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/uznaj/!svn/ver/1/test/functional/data_upload_controller_test.rb
+END
+profile_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/uznaj/!svn/ver/56/test/functional/profile_controller_test.rb
+END
+users_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/uznaj/!svn/ver/1/test/functional/users_controller_test.rb
+END
+master_login_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/uznaj/!svn/ver/1/test/functional/master_login_controller_test.rb
+END
+session_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/uznaj/!svn/ver/1/test/functional/session_controller_test.rb
+END
+home_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/uznaj/!svn/ver/1/test/functional/home_controller_test.rb
+END

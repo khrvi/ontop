@@ -1,0 +1,23 @@
+<%= error_messages_for 'company' %>
+<p><label for="company_name"> Название </label><br/>
+<%= text_field 'company', 'name'  %></p>
+
+<p><label for="company_company_comment"> Описание компании </label><br/>
+<%= text_area 'company', 'company_comment', {:style => 'width:400px;height:200px;'}  %></p>
+
+<p><label for="company_custom_name"> Краткое название </label><br/>
+<%= text_field 'company', 'custom_name'  %></p>
+
+<p><label for="company_city_id"> Город </label><br/>
+<%= select 'company', 'city_id', City.for_select %></p>
+
+<p><label for="company_tel"> Телефон </label><br/>
+<%= text_field 'company', 'tel'  %></p>
+
+<p><label for="company_fax"> Факс </label><br/>
+<%= text_field 'company', 'fax'  %></p>
+
+<p><label for="company_url"> URL </label><br/>
+<%= text_field 'company', 'url'  %></p>
+
+

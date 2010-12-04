@@ -1,0 +1,82 @@
+8
+
+dir
+164
+http://svn2.assembla.com/svn/uznaj/vendor/rails/railties/lib/rails
+http://svn2.assembla.com/svn/uznaj
+
+
+
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+38686702-15cf-42e4-a595-3071df8bf5ea
+
+gem_builder.rb
+file
+
+
+
+
+2008-09-03T19:35:00.062500Z
+3e3d7a125df3e19f181de6ae91c7d9be
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+
+plugin.rb
+file
+
+
+
+
+2008-09-03T19:35:00.078125Z
+bff8df4de15983950d6d9ba5f8829d39
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+
+version.rb
+file
+
+
+
+
+2008-09-03T19:35:00.093750Z
+28f6649d77a9960efffea00e196a0eaf
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+
+gem_dependency.rb
+file
+
+
+
+
+2008-09-03T19:35:00.109375Z
+bec68154e583e32c6c81e737bd85737c
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+
+mongrel_server
+dir
+
+plugin
+dir
+

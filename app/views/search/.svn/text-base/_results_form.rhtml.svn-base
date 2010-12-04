@@ -1,0 +1,6 @@
+<%= render :partial => 'shared/table',
+           :locals => {:width => '100%',
+                       :name => "result_field",
+                       :partial => "/search/search_result",
+                       :title => "Результаты поиска:",
+                       :hash => {:brands => brands,:companies => companies, :merchandises => merchandises, :categories => categories} } %>

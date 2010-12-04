@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/uznaj/!svn/ver/163/app/views/shared
+END
+_image_in_window.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/uznaj/!svn/ver/161/app/views/shared/_image_in_window.rhtml
+END
+_chart.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/uznaj/!svn/ver/50/app/views/shared/_chart.rhtml
+END
+_menu.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/uznaj/!svn/ver/50/app/views/shared/_menu.rhtml
+END
+_login.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/uznaj/!svn/ver/1/app/views/shared/_login.rhtml
+END
+_logout.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/uznaj/!svn/ver/16/app/views/shared/_logout.rhtml
+END
+_news.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/uznaj/!svn/ver/45/app/views/shared/_news.rhtml
+END
+_address_by_date.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/uznaj/!svn/ver/55/app/views/shared/_address_by_date.rhtml
+END
+_location_change.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/uznaj/!svn/ver/55/app/views/shared/_location_change.rhtml
+END
+_loginsub.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/uznaj/!svn/ver/45/app/views/shared/_loginsub.rhtml
+END
+_logoutsub.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/uznaj/!svn/ver/1/app/views/shared/_logoutsub.rhtml
+END
+_district_select.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/uznaj/!svn/ver/55/app/views/shared/_district_select.rhtml
+END
+_menu_entry.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/uznaj/!svn/ver/45/app/views/shared/_menu_entry.rhtml
+END
+_image_upload.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/uznaj/!svn/ver/163/app/views/shared/_image_upload.rhtml
+END
+_table.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/uznaj/!svn/ver/152/app/views/shared/_table.rhtml
+END
+_link_pic.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/uznaj/!svn/ver/50/app/views/shared/_link_pic.rhtml
+END
+_address_text.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/uznaj/!svn/ver/5/app/views/shared/_address_text.rhtml
+END

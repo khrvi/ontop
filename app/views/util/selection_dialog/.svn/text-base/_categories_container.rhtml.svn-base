@@ -1,0 +1,6 @@
+<p>
+
+<%= render :partial => '/admin/category/categories', :locals => {
+     
+       :all_links => all_links
+    } %>

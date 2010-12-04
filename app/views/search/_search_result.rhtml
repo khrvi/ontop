@@ -1,0 +1,47 @@
+<% unless brands.nil? && merchandises.nil? && categories.nil? && companies.nil? %>
+
+    <% unless brands.length == 0 and merchandises.length == 0 and categories.length == 0 and companies.length == 0 %>
+        <div>
+
+            <% if brands.length > 0 %>
+                <h3>Брэнды</h3>
+                <% brands.each do |b| %>
+                    <%= link_to h(b.name + score(b)), :controller =>'/brand', :action => 'description', :brand_id => b.id %>
+                    <br/>
+                <% end %>
+            <% end %>
+
+            <% if merchandises.length > 0 %>
+                <h3>Товары</h3>
+                <% merchandises.each do |w| %>
+                    <%= link_to h(w.name +  score(w)), :action => 'show_merchandise', :id => w.id %>
+                    <br/>
+                <% end %>
+            <% end %>
+
+            <% if categories.length > 0 %>
+                <h3>Категории</h3>
+                <% categories.each do |r| %>
+                    <% unless CompanyCategory.find_by_category_id(r.id).nil? %>
+                        <%= link_to h(r.name  + score(r)), :action => 'show_category', :id => r.id %>
+                        <br/>
+                    <% else %>
+                        <%= r.name %>
+                        <br/>
+                    <% end %>
+                <% end %>
+            <% end %>
+
+            <% if companies.length > 0 %>
+                <h3>Компании</h3>
+                <% companies.each do |e| %>
+                    <%= link_to h(e.name + score(e)), :action => 'show_company', :id => e.id %>
+                    <br/>
+                <% end %>
+            <% end %>
+
+        </div>
+    <% else %>
+        По данному запросу ничего не найдено
+    <% end %>
+<% end %>

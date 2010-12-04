@@ -1,0 +1,27 @@
+<div style="float:right;">
+  <%= link_to_function 'X', 'hide_modal_dialog();'%>
+</div>
+
+<h1><%= title %></h1>
+
+<div style="overflow:auto;width:400px;height:250px;">
+  
+<% if div == 'categories'%>  
+  <div id="countries" style="float:left;">
+ <% p @company = Company.find_by_actor_id(User.find(session[:user].to_i).actor_id).id%>
+      <%= render :partial => '/catalog/categories', :locals => {:all_links => true}%>
+
+  </div>
+<% end %>
+<% if div == 'cities'%>  
+  <div id="cities" style="float:left">
+	
+      <%= render :partial => 'cities_container',
+                 :locals  => {:obj_id  => name}%>
+
+  </div>
+<% end %>
+
+<div style="clear:both"></div>
+  
+</div>

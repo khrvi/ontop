@@ -1,0 +1,11 @@
+<ul id="pending_todo_list"  style="width:50%;">
+   <% @temp3 = Category.find(:all, :conditions => ['parent_category_id is null'], :order => 'name')%>
+   <% @temp3.each do |item| %>
+	    	<li  class="pending_todo" id='<%= item.id %>'>
+			     <%= item.name %>
+				 <%= render :partial => 'child_category', :locals =>{:root => item.id} %>
+			 </li>
+			     <%= sortable_element "pending_todo_list",:tree =>true, :url => {:action => 'sort_todos'} %>
+		         <%= draggable_element(item.id, :ghosting=>true, :revert=>true) %>
+   <% end %>
+</ul>   

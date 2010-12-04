@@ -1,0 +1,34 @@
+<table border="0" cellpadding="0" cellspacing="0" width="<%= width %>">
+  <tr>
+    <td><img src="/images/background/corner-l-u.gif" /></td>
+    <td style="background: url(/images/background/corner-t.gif) repeat-x"><img src="/images/background/corner-t.gif" /></td>
+    <td><img src="/images/background/corner-r-u.gif" /></td>
+  </tr>
+  <tr>
+    <td style="background: url(/images/background/corner-l.gif) repeat-y"><img src="/images/background/corner-l.gif" /></td>
+    <td width="100%">
+      <table border="0" width="100%">
+        <tr>
+          <td>
+            <%= title %>
+          </td>
+          <td style="text-align: right;">
+            <a href="" onclick="  new Effect.toggle('<%= name %>', 'blind'); return false; "><img src="/images/background/min-but.gif" /></a>
+            <a href="" onclick="  new Effect.toggle('<%= name %>', 'blind'); return false; "><img src="/images/background/full-but.gif" /></a>
+          </td>
+        </tr>
+      </table>
+      <div id="<%= name %>">
+        <% if partial %>
+          <%= render :partial => partial , :locals => hash %>
+        <% end %>
+      </div>
+    </td>
+    <td style="background: url(/images/background/corner-r.gif) repeat-y"><img src="/images/background/corner-r.gif" /></td>
+  </tr>
+  <tr>
+    <td><img src="/images/background/corner-l-d.gif" /></td>
+    <td style="background: url(/images/background/corner-b.gif) repeat-x"><img src="/images/background/corner-b.gif" /></td>
+    <td><img src="/images/background/corner-r-d.gif" /></td>
+  </tr>
+</table>

@@ -1,0 +1,115 @@
+8
+
+dir
+164
+http://svn2.assembla.com/svn/uznaj/vendor/rails/railties
+http://svn2.assembla.com/svn/uznaj
+
+
+
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+38686702-15cf-42e4-a595-3071df8bf5ea
+
+helpers
+dir
+
+Rakefile
+file
+
+
+
+
+2008-09-03T19:35:05.578125Z
+b48b798e57de3f07242f9bb10033341a
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+
+html
+dir
+
+doc
+dir
+
+builtin
+dir
+
+lib
+dir
+
+dispatches
+dir
+
+environments
+dir
+
+CHANGELOG
+file
+
+
+
+
+2008-09-03T19:35:05.609375Z
+77ccbe61963d4b3e0b171252763423c5
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+
+bin
+dir
+
+configs
+dir
+
+MIT-LICENSE
+file
+
+
+
+
+2008-09-03T19:35:05.640625Z
+beb132f85b972e229852580d323b2981
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+
+fresh_rakefile
+file
+
+
+
+
+2008-09-03T19:35:05.671875Z
+17f2f134da4cd31ea095d5868ca89e86
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+
+README
+file
+
+
+
+
+2008-09-03T19:35:05.687500Z
+0cdf56769f20a2b73a929ac3ba633152
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+

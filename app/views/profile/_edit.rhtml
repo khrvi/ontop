@@ -1,0 +1,68 @@
+  <%= error_messages_for 'person' %>
+  <%= hidden_field_tag 'user_id', @user ? @user.id : '' %>
+  <%= hidden_field_tag 'person_id', @person ? @person.id : '' %>
+
+  <div id="d_tabbar" class="dhtmlxTabBar" imgpath="/images/tab_img/" style="width:700px; height:520px;" skinColors="#F8F2EE,#DFC3AE" >
+	
+	<div id="s1" name="Общее" style="width:600px;height:420px;">
+   		<table border="0">
+		  <tr>
+		    <td> Логин </td>
+		    <td> <%=h @user.login %> </td>
+		    <td colspan="2">&nbsp;</td>
+		  </tr>
+		 
+		  <tr>
+		    <td> Имя* </td>
+		    <td> <%= text_field 'person', 'first_name' %> </td>
+		    <td> Фамилия* </td>
+		    <td> <%= text_field 'person', 'last_name' %> </td>
+		  </tr>
+		  <tr>
+		    <td colspan="2">&nbsp;</td>
+		    <td colspan="2">&nbsp;</td>
+		  </tr>
+		  <tr>
+		    <td> Должность* </td>
+		    <td> <%= text_field 'person', 'position' %> </td>
+		    <td colspan="2">&nbsp;</td>
+		  </tr>
+		  <tr>
+		    <td> Телефон* </td>
+		    <td> <%= text_field 'person', 'phone' %> </td>
+		    <td> Мобильный телефон* </td>
+		    <td> <%= text_field 'person', 'mobile' %> </td>
+		  </tr>
+		  <tr>
+		    <td> Факс </td>
+		    <td> <%= text_field 'person', 'fax' %> </td>
+		    <td> Email </td>
+		    <td> <%= text_field 'person', 'email' %> </td>
+		  </tr>
+		  <tr>
+		    <td> Дата рождения* </td>
+		    <td> <%= date_picker_field 'person', 'birthday' %> </td>
+		    <td colspan="2">&nbsp;</td>
+		  </tr>
+		  		  
+		   <tr>
+		    <td> Загрузка фотографий </td>
+		     <td colspan="3">
+             <%= render :partial => '/shared/image_upload' %>
+         </td>
+		  </tr>
+		  <tr>
+	        <td> Изображения </td>
+	        <td>
+	        	<% @person.albums.each do |pb| %>
+	              <%= picture_tag pb.picture, false %>
+	              <%= link_to 'Удалить', { :controller => "/profile" ,:action => 'del', :id => pb.picture_id, :person_id => @person.id }, :confirm => 'Вы уверены?', :method => :post %>
+	              <br/>
+	            <% end %>
+            </td>
+        	<td colspan="2">&nbsp;</td>
+      	  </tr>
+	    </table>
+    </div>
+  </div>
+

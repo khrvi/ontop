@@ -1,0 +1,10 @@
+<% form_remote_tag  :url => {:action => 'update_result'} do %>
+    <input id="amount" type="hidden" value="<%= h @amount %>" name="amount"/>
+    <% 0.upto(@amount-1) do |e| %>
+        <p>
+            <%= h @array_names[e] %><br/>
+            <%= select 'category', e, MerchandiseColumnDesc.for_select(@category_id, e), { :include_blank => true } %>
+        </p>
+    <% end %>
+    <%= submit_tag 'Искать' %>
+<% end %>

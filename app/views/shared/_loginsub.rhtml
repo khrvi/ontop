@@ -1,0 +1,37 @@
+<table border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td><img src="/images/background/corner-l-u.gif" /></td>
+                <td style="background: url(/images/background/corner-t.gif) repeat-x"><img src="/images/background/corner-t.gif" /></td>
+                <td><img src="/images/background/corner-r-u.gif" /></td>
+              </tr>
+              <tr>
+                <td style="background: url(/images/background/corner-l.gif) repeat-y"><img src="/images/background/corner-l.gif" /></td>
+                <td>
+					<table border="0" cellpadding="0" cellspacing="0" class="login-tbl">
+					  <tr>
+					    <td colspan="3" style="font-family: Tahoma; font-size: 12px; font-weight:bold;">Авторизация</td>
+					  </tr>
+					  <tr>
+					    <td><img src="/images/background/edit-left.gif" width="10" height="19" align="left" /><div class="edit-title">Логин :</div></td>
+					    <td>
+					    	<%= text_field_tag :login, params[:login], {:class => 'login-inp', :style=> "width: 130px;"} %></td>
+					    <td><img src="/images/background/edit-right.gif" width="10" height="19" align="left" /></td>
+					  </tr>
+					  <tr>
+					    <td><img src="/images/background/edit-left.gif" width="10" height="19" align="left" /><div class="edit-title">Пароль :</div></td>
+					    <td><%= password_field_tag :password, params[:password], {:class => 'login-inp', :style=> "width: 130px;"} %></td>
+					    <td><img src="/images/background/edit-right.gif" width="10" height="19" align="left" /></td>
+					  </tr>
+					  <tr>
+					    <td colspan="3" align="center"><input type="submit" name="button" id="button" value="Войти" class="login-but" /></td>
+					  </tr>
+					 </table>
+                 </td>
+                <td style="background: url(/images/background/corner-r.gif) repeat-y"><img src="/images/background/corner-r.gif" /></td>
+              </tr>
+              <tr>
+                <td><img src="/images/background/corner-l-d.gif" /></td>
+                <td style="background: url(/images/background/corner-b.gif) repeat-x"><img src="/images/background/corner-b.gif" /></td>
+                <td><img src="/images/background/corner-r-d.gif" /></td>
+              </tr>
+          </table>

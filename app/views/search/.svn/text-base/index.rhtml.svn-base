@@ -1,0 +1,15 @@
+<div class="content-title">
+    <a href="">Быстрый поиск в базе данных</a>
+</div>
+<br>
+<div id="search">
+    <% form_remote_tag :update => 'results', :url => {:action => 'search'}, :html => {:id => 'search_form'} do %>
+        <%= render :partial => 'shared/table', :locals => {:width => '100%',
+                :name => "search_field",
+                :partial => "/search/search_field",
+                :title => "Быстрый поиск:",
+                :hash => {} } %>
+    <% end %>
+</div>
+
+<div id="results"></div>

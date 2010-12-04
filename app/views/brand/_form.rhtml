@@ -1,0 +1,57 @@
+<%= error_messages_for 'brand' %>
+<div id="a_tabbar" class="dhtmlxTabBar" imgpath="/images/tab_img/" style="height:500px;" skinColors="#F8F2EE,#DFC3AE" >
+  <div id="a1" name="Брэнд" style="width:600px;height:420px;">
+    <table cellspacing="5">
+      <tr>
+        <td valign="top">Название компании</td>
+        <td valign="top" colspan="3">
+          <%= text_field 'brand', 'name' %>
+        </td>
+      </tr>
+
+      <tr>
+        <td valign="top">Описание компании</td>
+        <td valign="top" colspan="3">
+          <%= text_field 'brand', 'description' %>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Товары компании:</td>
+        <td colspan="3">
+          <div id="winery">
+            <%= render :partial => 'merchandise_details', :locals => {:merchandise => @brand.merchandises} %>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td valign="top">Сайт компании:</td>
+        <td colspan="3">
+          <%= text_field 'brand', 'site' %>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Загрузка изображений</td>
+        <td colspan="4">
+          <%= render :partial => '/shared/image_upload' %>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Изображения</td>
+        <td>
+          <% @brand.albums.each do |pb| %>
+            <%= picture_tag pb.picture_id, false %>
+            <%= link_to 'Удалить', { :action => 'delete_picture', :id => pb.picture_id, :brand_id => @brand.id }, :confirm => 'Вы уверены?', :method => :post %>
+            <br/>
+          <% end %>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div id="a2" name="Описание" style="width:680px;height:440px;margin:10px;">
+    <%= text_area 'brand', 'description', {:style => 'width:660px; height:420px;'} %>
+  </div>
+</div>

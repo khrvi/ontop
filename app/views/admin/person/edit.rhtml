@@ -1,0 +1,12 @@
+<div class="content-title"><a href=""><%= 'Редактирования данных пользователя' %></a></div>
+<br>
+
+<% form_tag :action => 'update', :id => @actor do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag 'Сохранить' %>
+<% end %>
+<%if params[:path].nil? %>
+	<%= link_to 'Назад к списку', :action => 'list' %>
+<% else %>
+	<%= link_to 'Назад к списку', :controller => "/profile", :action => params[:path] %>
+<% end %>

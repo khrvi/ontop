@@ -1,0 +1,17 @@
+<table class="data" border="0">
+  <tr>
+    <% for brand in @brands %>
+      <td align="center" valign="top">
+        <%= link_to h(brand.name), {:controller => "/brand" ,:action => 'show', :brand_id => brand.id} %>
+        <br/>
+        <% unless pictures = brand.albums.empty? %>
+          <%= picture_tag pictures.first, false %>
+        <% else %>
+          <%= image_tag "noimage.jpg" %>
+        <% end %>
+      </td>
+    <% end %>
+  </tr>
+</table>
+<%= will_paginate @brands %>
+<br />

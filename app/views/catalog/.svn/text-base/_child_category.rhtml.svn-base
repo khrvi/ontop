@@ -1,0 +1,35 @@
+<ul id="p_t_l" >
+  <% child.each do |item| %>
+    <li  style = "list-style-type: none;" id='<%= item.id %>'>
+      <% if item.categories.length > 0 %>
+        <table>
+          <tr>
+            <td>
+              <div id="link1_<%= item.id %>" >
+                <%= link_to_remote image_tag('/images/background/minus.gif', :style => 'border:none;'), :url => {:controller => "catalog",:action => 'list_up_down', :id => item.id, :flag => true, :contr => true} %>
+              </div>
+            </td>
+            <td>
+              <%=h item.name %>
+            </td>
+          </tr>
+        </table>
+        <div id="div1_<%= item.id %>" >
+          <%= render :partial => '/catalog/child_category', :locals =>{:child => item.categories, :all_links => all_links} %>
+        </div>
+      <% else %>
+        <% if item.has_merchandises?(@company) %>
+          <%= link_to_remote h(item.name),  :url => {:action => 'update_merch', :category_id => item.id,:company_id => @company }%>
+        <% else%>
+          <% if all_links %>
+            <% if item.merchandises.length > 0 %>
+              <%= link_to_remote h(item.name),  :url => { :action => 'update_merch', :category_id => item.id }%>
+            <% end %>
+          <% else %>
+            <%=h item.name %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

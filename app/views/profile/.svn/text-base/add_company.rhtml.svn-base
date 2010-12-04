@@ -1,0 +1,7 @@
+<div class="content-title"><a href="index.html">Создание нового предприятия</a></div>
+<br>
+<% form_tag :controller => '/profile',:action => 'add_comp', :id => @company do %>
+  <%= render :partial => 'form_add_company' %>
+  <%= submit_tag 'Создать' %>
+<% end %>
+<%= link_to 'Назад', :action => 'show' %>

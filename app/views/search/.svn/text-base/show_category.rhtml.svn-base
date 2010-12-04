@@ -1,0 +1,28 @@
+<% unless params[:id].nil? %>
+    <% @category = Category.find(params[:id]) %>
+    <% company_id = CompanyCategory.find_by_category_id(params[:id]).company_id %>
+<% end %>
+<% company = Company.find(company_id) %>
+<div class="content-title">
+    <a href="">Информация о категории: <%= h @category.name %></a>
+</div>
+<br>
+<% if logged_in? && current_user.has_role?('datamanager') %>
+    <p><%= link_to 'Редактировать', :controller => 'admin/category', :action => 'edit', :category_id => @category.id %></p>
+<% end %>
+<p>
+    Описание:  <%= h @category.category_comment %>
+</p>
+
+<table>
+    <tr>
+        <td valign="top">Компании:</td>
+        <td valign="top"><%= company ? link_to(h(company.name), :action => 'show_country', :id => company.id) : '' %></td>
+    </tr>
+    <% if @category.parent_category_id %>
+        <tr>
+            <td valign="top">Является дочерней для категории:</td>
+            <td valign="top"><%= link_to h(@category.parent_category.name), :action => 'show_category', :id => @category.parent_category_id %></td>
+        </tr>
+    <% end %>
+</table>

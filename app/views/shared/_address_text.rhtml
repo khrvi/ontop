@@ -1,0 +1,15 @@
+<% unless address_by_date.name.blank? %>
+  <%= address_by_date.name %>
+  <%= separator %>
+<% end %>
+
+<% 1.upto(4) do |i| %>
+  <% al = address_by_date.send('address_line_' + i.to_s) %>
+  <% unless al.blank? %>
+    <%= al + separator %>
+  <% end %>
+<% end %>
+
+<%= address_by_date.zip_code %> <%= address_by_date.city %> <%= separator %>
+
+<%= address_by_date.state %> <%= address_by_date.country %>

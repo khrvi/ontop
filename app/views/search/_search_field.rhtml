@@ -1,0 +1,21 @@
+<table>
+    <tr>
+        <td width="600">
+            <%= text_field_tag 'name', '', {:style => 'width:600px;'} %>
+            <%= observe_form(  :search_form,
+                    :frequency  =>  0.5,
+                    :update     =>  :results,
+                    #:with => "Form.serialize('search_form')",
+            :url        =>  { :action =>  :search } #,
+            #:loading    =>  "Element.hide('search');Element.show('search-indicator')",
+            #:complete   =>  "Element.show('search');Element.hide('search-indicator')"
+            )
+            %>
+        <td>
+    </tr>
+    <tr>
+        <td align="right">
+            <%= submit_tag 'Искать' %>
+        </td>
+    </tr>
+</table>        

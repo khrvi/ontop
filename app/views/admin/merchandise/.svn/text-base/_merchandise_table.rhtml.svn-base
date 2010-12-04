@@ -1,0 +1,65 @@
+<!-- #Input values: @category, @company --> 
+<% if @merchandise.length >0  %>
+  <table class="data">
+    <tr>
+      <th class="data"> Категория </th>
+      <th class="data"> Производитель </th>
+      <th class="data"> Наименование </th>
+      <th class="data"> Цена </th>
+      <% Category.find_by_id(@category).merchandise_column_names.each do |q| %>
+        <th class="data"> <%=h q.column_name %> </th>
+      <% end %>
+
+      <% if @valid_role %>
+        <th class="data"> Дата создания </th>
+        <th class="data"> Действия </th>
+      <% end %>
+    </tr>
+
+    <% for merchandise in @merchandise %>
+      <% mercomp_pr =  PriceByDate.find_all_by_merchan_id(merchandise.id, :conditions => ["company_id=?",@company]) %>
+
+      <% price = nil %>
+      <% if mercomp_pr.length > 0 %>
+        <%  temp = mercomp_pr[0].created_at %>
+      <% end %>
+      <% mercomp_pr.each do |q| %>
+        <% if temp <= q.created_at %>
+          <% price = Price.find_by_id(q.price_id).amount %>
+          <% temp = q.created_at %>
+        <% end %>
+      <% end %>
+      <tr>
+        <td class="data" valign="top"> <%=h merchandise.category.name %> </td>
+        <td class="data" valign="top"> <%=h merchandise.brand.name %> </td>
+        <td class="data" valign="top">
+          <b><%= link_to h(merchandise.name), :controller => "/search",:action => 'show_merchandise', :id => merchandise.id %>
+          </b><br>
+        </td>
+        <td class="data" valign="top"> <%=h price %> </td>
+        <% if merchandise.merchandise_column_descs.length == 0 %>
+          <% Category.find_by_id(@category).merchandise_column_names.each do |q| %>
+            <td class="data" valign="top">
+              не определено
+            </td>
+          <% end %>
+        <% else %>
+          <% merchandise.merchandise_column_descs.each do |q| %>
+            <td class="data" valign="top">
+              <%=h q.column_value %>
+            </td>
+          <% end %>
+        <% end %>
+
+        <% if @valid_role %>
+          <td class="data"><%= create_update_info merchandise, '<br/>' %></td>
+          <td class="data" valign="top">
+            <%= link_to 'Редактировать',:controller => "/admin/merchandise", :action => 'edit', :id => merchandise %>
+            <%= link_to 'Удалить', {:controller => "/admin/merchandise", :action => 'destroy', :id => merchandise }, :confirm => 'Вы уверены?', :method => :post %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+  <br />
+<% end %>

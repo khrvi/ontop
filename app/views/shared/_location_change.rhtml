@@ -1,0 +1,17 @@
+<!-- Name of the city and district plus link to the Ajax dialog-->
+<% unless district_id.nil? %>
+	<% d = District.find_by_id(district_id) %>
+	<% c = City.find_by_id(d.city_id) %>
+	<%= c.name + '/' + d.name  %>
+<% end %>
+<br/>
+<input id="<%= obj + '_district_id'%>" type="hidden" value="<%= district_id%>" name="<%= obj + '[district_id]'%>"/>
+<%= link_to_remote 'Выбрать/Изменить ',
+      :url => {
+          :controller => '/util/selection_dialog',
+          :action => 'test',
+          :obj => obj,
+          :select_action => 'category_selected',
+          :answer_ajax => answer_ajax
+      },
+      :complete => "set_internal_dialog_position();" %>

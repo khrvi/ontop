@@ -1,0 +1,17 @@
+<table cellspacing="10">
+    <tr>
+        <td valign="top">Название компании:</td>
+        <td valign="top"><%=h @company.name %></td>
+    </tr>
+    <tr>
+        <td valign="top">Телефон:</td>
+        <td valign="top"><%=h @company.tel %></td>
+    </tr>
+    <tr>
+        <td valign="top">Создатель:</td>
+        <td valign="top"><%=h User.find_by_actor_id(@company.actor_id).login %></td>
+    </tr>
+</table>
+
+
+	  

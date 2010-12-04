@@ -1,0 +1,14 @@
+<% id = root %>
+<% child = Category.find_all_by_parent_category_id(id, :order => 'name') %>
+<% if child.length > 0 %>
+    <ul id="p_t_l">
+        <% child.each do |item| %>
+            <li class="pending_todo" id='<%= item.id %>'>
+                <%= h item.name %>
+                <%= render :partial => 'child_category', :locals =>{:root => item.id} %>
+            </li>
+            <%= sortable_element "p_t_l", :tree =>true, :url => {:action => 'sort_todos'} %>
+            <%= draggable_element(id, :ghosting=>true, :revert=>true) %>
+        <% end %>
+    </ul>
+<% end %>

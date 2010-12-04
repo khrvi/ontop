@@ -1,0 +1,10 @@
+<% parent.child_categories.each_with_index do |r, i| %>
+  <div>
+    <div style="float:left;width:<%= 30 * depth %>px;height:10px"></div>
+    <div style="float:left;">
+      <%= link_to h(r.name), :action => 'show_category', :id => r.id %>
+    </div>
+    <div style="clear:both"></div>
+  </div>
+  <%= render :partial => 'category_simple', :locals => {:parent => r, :depth => depth + 1} %>
+<% end %>

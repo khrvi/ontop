@@ -1,0 +1,40 @@
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td class="tab1" colspan="7">
+      <% if tab == 1 %>
+        <div id="tabactive" class="tab2">
+          <img width="9" height="9" border="0" alt="" src="http://static.onliner.by/pic/ico_rowview3.gif"/>
+          Развёрнутый вид списка
+        </div>
+      <% else %>
+        <div class="tab2">
+          <img width="9" height="9" border="0" alt="" src="http://static.onliner.by/pic/ico_rowview3.gif"/>
+          <%= link_to_remote "Развёрнутый вид списка",  :url => {:action => 'update_tab', :tab => 1, :category_id => @category,:company_id => @company}%>
+        </div>
+      <% end %>
+      <% if tab == 2 %>
+        <div id="tabactive" class="tab2">
+          <img width="9" height="9" border="0" alt="" src="http://static.onliner.by/pic/ico_gridview3.gif"/>
+          Табличный вид для быстрого обзора
+        </div>
+      <% else %>
+        <div class="tab2">
+          <img width="9" height="9" border="0" alt="" src="http://static.onliner.by/pic/ico_gridview3.gif"/>
+          <%= link_to_remote "Табличный вид для быстрого обзора",  :url => {:action => 'update_tab', :tab => 2, :category_id => @category,:company_id => @company }%>
+        </div>
+      <% end %>
+
+      <% if tab == 3 %>
+        <div id="tabactive" class="tab2">
+          <img width="8" height="9" border="0" alt="" src="http://static.onliner.by/pic/ico_listview.gif"/>
+          Одностраничный список
+        </div>
+      <% else %>
+        <div class="tab2">
+          <img width="8" height="9" border="0" alt="" src="http://static.onliner.by/pic/ico_listview.gif"/>
+          <%= link_to_remote "Одностраничный список",  :url => {:action => 'update_tab', :tab => 3, :category_id => @category,:company_id => @company }%>
+        </div>
+      <% end %>
+    </td>
+  </tr>
+</table>

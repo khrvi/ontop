@@ -1,0 +1,12 @@
+<% unless @company %>
+    <%= link_to 'Добавить предприятие', :controller => '/profile', :action => 'add_company', :user_id => @current_user %>
+<% else %>
+    <%= link_to 'Редактировать', :action => 'edit_company', :user_id => @user_id %>
+    <br/>
+    <br/>
+    <%= link_to 'Удалить', { :action => 'destroy', :id => @user_id }, :confirm => 'Вы уверены что хотите удалить компанию?', :method => :post %>
+    <br/>
+    <br/>
+    <%= link_to 'Добавить пользователя', { :controller => "/users", :action => 'new', :company_id => @company.id } %>
+<% end %>
+   

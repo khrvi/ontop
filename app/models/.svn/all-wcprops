@@ -1,0 +1,167 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/uznaj/!svn/ver/162/app/models
+END
+category.rb
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/uznaj/!svn/ver/155/app/models/category.rb
+END
+util.rb
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/uznaj/!svn/ver/64/app/models/util.rb
+END
+user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/uznaj/!svn/ver/144/app/models/user.rb
+END
+merchandise.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/uznaj/!svn/ver/157/app/models/merchandise.rb
+END
+master_login.rb
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/uznaj/!svn/ver/1/app/models/master_login.rb
+END
+district.rb
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/uznaj/!svn/ver/153/app/models/district.rb
+END
+brand.rb
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/uznaj/!svn/ver/161/app/models/brand.rb
+END
+stats_login.rb
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/uznaj/!svn/ver/1/app/models/stats_login.rb
+END
+price_by_date.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/uznaj/!svn/ver/153/app/models/price_by_date.rb
+END
+currency.rb
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/uznaj/!svn/ver/153/app/models/currency.rb
+END
+image_owner.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/uznaj/!svn/ver/162/app/models/image_owner.rb
+END
+merchandise_column_desc.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/uznaj/!svn/ver/153/app/models/merchandise_column_desc.rb
+END
+merchandise_column_name.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/uznaj/!svn/ver/153/app/models/merchandise_column_name.rb
+END
+album.rb
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/uznaj/!svn/ver/155/app/models/album.rb
+END
+custom_company_name.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/uznaj/!svn/ver/16/app/models/custom_company_name.rb
+END
+conversion_rate.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/uznaj/!svn/ver/55/app/models/conversion_rate.rb
+END
+role.rb
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/uznaj/!svn/ver/153/app/models/role.rb
+END
+licence.rb
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/uznaj/!svn/ver/153/app/models/licence.rb
+END
+price.rb
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/uznaj/!svn/ver/55/app/models/price.rb
+END
+cache.rb
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/uznaj/!svn/ver/60/app/models/cache.rb
+END
+company_category.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/uznaj/!svn/ver/61/app/models/company_category.rb
+END
+person.rb
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/uznaj/!svn/ver/155/app/models/person.rb
+END
+company.rb
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/uznaj/!svn/ver/155/app/models/company.rb
+END
+city.rb
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/uznaj/!svn/ver/155/app/models/city.rb
+END
+actor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/uznaj/!svn/ver/153/app/models/actor.rb
+END
+picture.rb
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/uznaj/!svn/ver/156/app/models/picture.rb
+END
+address_by_date.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/uznaj/!svn/ver/128/app/models/address_by_date.rb
+END

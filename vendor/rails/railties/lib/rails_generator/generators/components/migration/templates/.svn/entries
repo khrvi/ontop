@@ -1,0 +1,40 @@
+8
+
+dir
+164
+http://svn2.assembla.com/svn/uznaj/vendor/rails/railties/lib/rails_generator/generators/components/migration/templates
+http://svn2.assembla.com/svn/uznaj
+
+
+
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+38686702-15cf-42e4-a595-3071df8bf5ea
+
+migration.rb
+file
+
+
+
+
+2008-09-03T19:34:51.515625Z
+b4e9dbad1465a0c109708c97f10e7d52
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+

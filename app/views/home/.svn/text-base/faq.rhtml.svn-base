@@ -1,0 +1,7 @@
+<div class="content-title">
+    <a href="">Часто задаваемые вопросы</a>
+</div>
+<br>
+<h2> Сколько сейчас времени? </h2>
+<%= short_datetime Time.now %>
+

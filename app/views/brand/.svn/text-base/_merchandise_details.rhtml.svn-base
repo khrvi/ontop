@@ -1,0 +1,5 @@
+Список выпускаемых товаров:
+<% for merch in merchandise %>
+  <br/>
+  *<%= merch.category.name %>
+<% end  %>

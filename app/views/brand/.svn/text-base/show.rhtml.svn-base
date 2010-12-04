@@ -1,0 +1,43 @@
+<div class="content-title">
+  <a href="">Информация о брэнде: <%=h @brand.name %></a>
+</div>
+<br>
+<table border="0" width="100%">
+  <tr>
+    <td width="400px">
+      <div id="picture">
+        <% unless @brand.albums.empty? %>
+           <%= picture_tag @brand.albums.first.picture_id, true %>
+        <% else %>
+          <%= image_tag "noimage.jpg" %>
+        <% end %>
+      </div>
+      <table  width="400px" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <% @brand.albums.each do |pb| %>
+            <td  valign="top">
+              <%= picture_icon_tag pb.picture.id, true %>
+            </td>
+          <% end %>
+        </tr>
+      </table>
+    </td>
+    <td>
+      <%= h @brand.site %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <table class="data">
+        <tr>
+          <td>
+            <%= h @brand.description%>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td>
+    </td>
+  </tr>
+</table>
+<%= link_to 'Назад к списку', :action => 'index' %>

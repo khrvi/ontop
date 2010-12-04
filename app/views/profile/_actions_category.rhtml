@@ -1,0 +1,19 @@
+<br/> Удаление категории из общего списка категорий
+<br/>
+	<%= select 'category', "id" , Category.select %>&nbsp;&nbsp;&nbsp;
+	<a onclick="delete_cat();" href="">Удалить</a>
+<br/>
+<br/> Удаление категории из списка категорий предприятия
+<br/>
+	<% com = Company.find_by_actor_id(User.current.actor_id).id %>
+	<%= select 'mycategory', "id" , Category.select_my_category(com) %>&nbsp;&nbsp;&nbsp;
+	<a onclick="delete_my_cat();" href="">Удалить</a>
+<br/>
+<br/>	
+	<%= link_to 'Просмотр характеристик товара',{ :action => 'category_param'  } %>
+<br/>
+<br/>
+	<%= link_to 'Создать новую категорию', :action => 'form_add_category' %>
+<br/>
+<br/>
+	<%= link_to 'Вернуться к профилю', :action => 'back' %>

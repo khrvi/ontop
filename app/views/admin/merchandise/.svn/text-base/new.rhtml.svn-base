@@ -1,0 +1,8 @@
+<h1> <%= 'Создание нового товара' %> </h1>
+
+<% form_tag :action => 'create' do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag 'Создать' %>
+<% end %>
+
+<%= link_to 'Назад', :controller => "/profile",:action => 'show' %>

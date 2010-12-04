@@ -1,0 +1,36 @@
+<div class="content-title">
+    <a href="">Поиск товаров по характеристикам</a></div>
+<br>
+<table width="100%" cellspacing="1" cellpadding="1" border="0">
+    <tr>
+        <td width="20%" style="vertical-align:top;">
+            <div id="categories" style="float:left">
+                <%= render :partial => 'shared/table', :locals => {:width => '100%',
+                        :name => "category_field",
+                        :partial => "/admin/category/categories",
+                        :title => "Категории:",
+                        :hash => {} } %>
+            </div>
+        </td>
+        <td width="55%" style="vertical-align:top;">
+            <div id="results" style="float:left; ">
+                <%= render :partial => 'shared/table', :locals => {:width => '100%',
+                        :name => "results_field",
+                        :partial => nil,
+                        :title => "Результаты поиска:",
+                        :hash => {} } %>
+            </div>
+        </td>
+        <td width="25%" style="vertical-align:top;">
+            <div id="parameters" style="float:left;">
+
+                <%= render :partial => 'shared/table', :locals => {:width => '100%',
+                        :name => "parameters_field",
+                        :partial => nil,
+                        :title => "Параметры поиска:",
+                        :hash => {}  } %>
+
+            </div>
+        </td>
+    </tr>
+</table>

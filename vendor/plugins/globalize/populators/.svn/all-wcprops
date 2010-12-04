@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/uznaj/!svn/ver/2/vendor/plugins/globalize/populators
+END
+pop_dates.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/uznaj/!svn/ver/2/vendor/plugins/globalize/populators/pop_dates.rb
+END
+pop_migration.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/uznaj/!svn/ver/2/vendor/plugins/globalize/populators/pop_migration.rb
+END
+pop_seps.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/uznaj/!svn/ver/2/vendor/plugins/globalize/populators/pop_seps.rb
+END
+pop_pluralization.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/uznaj/!svn/ver/2/vendor/plugins/globalize/populators/pop_pluralization.rb
+END

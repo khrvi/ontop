@@ -1,0 +1,55 @@
+8
+
+dir
+164
+http://svn2.assembla.com/svn/uznaj/vendor/rails/railties/lib/rails_generator/generators/components/mailer
+http://svn2.assembla.com/svn/uznaj
+
+
+
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+38686702-15cf-42e4-a595-3071df8bf5ea
+
+mailer_generator.rb
+file
+
+
+
+
+2008-09-03T19:34:50.953125Z
+d71a4841eaae9d2f3f1fa0bd11c9784b
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+
+USAGE
+file
+
+
+
+
+2008-09-03T19:34:50.968750Z
+417b5c1d180dca20144782e14cc81040
+2008-09-03T19:26:08.375634Z
+133
+khrvi
+
+templates
+dir
+

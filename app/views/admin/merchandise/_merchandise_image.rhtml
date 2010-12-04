@@ -1,0 +1,18 @@
+<% if @merchandise.length > 0 %>
+  <table class="data">
+    <tr>
+      <% @merchandise.each_with_index do |merchandise, index| %>
+        <% if index%4 == 0 %>
+    </tr>
+    <tr>
+        <% end %>
+        <td>
+          <%= render :partial => '/admin/merchandise/short_info', :locals => {:merchandise => merchandise, :category_id => @category}  %>
+        </td>
+      <% end %>
+    </tr>
+  </table>
+  <br />
+<% else %>
+Нет доступных товаров
+<% end  %>

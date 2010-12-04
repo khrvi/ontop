@@ -1,0 +1,67 @@
+8
+
+dir
+164
+http://svn2.assembla.com/svn/uznaj/vendor/plugins/restful_authentication
+http://svn2.assembla.com/svn/uznaj
+
+
+
+2008-01-06T17:21:37.469907Z
+2
+khrvi
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+38686702-15cf-42e4-a595-3071df8bf5ea
+
+Rakefile
+file
+
+
+
+
+2008-08-14T12:45:58.765625Z
+ebfd713e05e35c55392c1999bf3bfb44
+2008-01-06T17:21:37.469907Z
+2
+khrvi
+
+install.rb
+file
+
+
+
+
+2008-08-14T12:45:58.781250Z
+3773dce53854a282602d79a631a1ff8a
+2008-01-06T17:21:37.469907Z
+2
+khrvi
+
+generators
+dir
+
+README
+file
+
+
+
+
+2008-08-14T12:45:58.796875Z
+4d6a7a1fc39652ab6b51e87b6162d942
+2008-01-06T17:21:37.469907Z
+2
+khrvi
+

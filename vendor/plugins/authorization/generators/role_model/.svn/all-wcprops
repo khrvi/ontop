@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/uznaj/!svn/ver/3/vendor/plugins/authorization/generators/role_model
+END
+USAGE
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/uznaj/!svn/ver/3/vendor/plugins/authorization/generators/role_model/USAGE
+END
+role_model_generator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/uznaj/!svn/ver/3/vendor/plugins/authorization/generators/role_model/role_model_generator.rb
+END

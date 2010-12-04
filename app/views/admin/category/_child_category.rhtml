@@ -1,0 +1,44 @@
+<% child = root %>
+<% if child.length > 0 %>
+	<ul id="p_t_l" >
+	
+	  <% child.each do |item| %>
+			    <li class="pending_todo" id="<%= item.id %>" >
+				      <% root = Category.find(:all, :conditions => ['parent_category_id=?', item.id], :order => 'name') %>
+					  <% if root.length > 0 %>
+					  	<table  border="0">
+							<tr>
+							<td>
+					  	<div id="link_<%= item.id %>" >
+					  		<%= link_to_remote image_tag('/images/background/minus.gif', :style => 'border:none;'), :url => {:controller => "/catalog",:action => 'list_up_down', :id => item.id, :flag => true, :contr => false} %>
+					   	</div>
+					   		</td>
+					    	<td>
+					    
+					  			<%= item.name %>
+					  		
+					  	</td>
+					  			</tr>
+					   	</table>	
+					 
+					
+					  	<div id="div_<%= item.id %>" >
+					  	  <%= render :partial => '/admin/category/child_category', :locals =>{:root => root, :depth => depth + 1} %>
+					 	</div>
+					  <% else %>
+					  	<% m = Merchandise.find_all_by_category_id(item.id) %>
+						<% if m.length > 0 %>
+							<% @category = item.id %>
+									<%= link_to_remote item.name,  :url => { :action => 'update_merch', :category_id => item.id }%>	
+							
+						<% else%>
+									<%= item.name %>
+					    	
+						<% end %>
+						
+					  <% end %>
+					  <%= draggable_element(item.id.to_s , :ghosting=>true, :revert=>true) %>
+				 </li>
+	  <% end %>
+	
+<% end %>

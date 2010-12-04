@@ -1,0 +1,43 @@
+<% form_tag({ :action=>'save_correct'},:name => 'category_upload_correct', :multipart => true) do %>
+  <% categories_first =  nil %>
+  <% category = nil %>   
+  <% country_string = params[:country_array] %>
+  <% list_categories_string = params[:list_categories_array] %>
+  <% name_combo_string = params[:name_combo_array] %>
+ 
+  <% list_categories_array = list_categories_string.split(",") %> 
+  <% name_combo_array = name_combo_string.split(",") %>
+  <% country_array = country_string.split(",") %>
+  <% max = country_array.length %>
+   
+  <% max.times do |i|%>
+ 	<hr>
+	<% if country_array[i] == 'nil' %>
+	  <%= "The parent category not define for the category(s) " + list_categories_array[i] +  " .Please select a parent category" %>
+	  <p><label for="category_country_id"> <%= 'Category' %> </label><br/>
+	  <div id="<%= name_combo_array[i]%>">	
+	  <%= render :partial => 'category_selection', :locals => {:name_combo=> name_combo_array[i],:category_id => categories_first,:category =>category, :answer_ajax => true} %>
+      </div>
+	 
+	<% else %>
+	  <%= "The category " + country_array[i] +  " not found in the database. Please select a new parent category for category(s) " + list_categories_array[i] %>
+	  <p><label for="category_country_id"> <%= 'Category' %> </label><br/>
+	  <div id="<%= name_combo_array[i]%>">	
+	  <%= render :partial => 'category_selection', :locals => {:name_combo=> name_combo_array[i],:f => false,:category_id => categories_first,:category =>category,:answer_ajax => true} %>
+      </div>
+	 
+	<% end %>  
+  <% end %>
+  <input id="max" type="hidden" value="<%=  params[:max] %>" name="max"/>
+  <input id="file" type="hidden" value="<%= params[:tmp_file] %>" name="file"/>
+  <input id="string" type="hidden" value="<%= params[:temp_hash_country] %>" name="string"/>
+  <hr>
+  <br/>
+  <input TYPE=button  OnClick='EmptyField("<%=name_combo_string%>","<%=list_categories_string%>",3);'  VALUE="Save">
+  <br/>
+  
+<% end %>
+<br/>
+<a href="/admin/category/upload" onclick="<%= remote_function(:url => { :controller => 'category',:action => 'del_file'} , :file => params[:tmp_file] ) %> ">
+<%= 'Назад' %></a>
+

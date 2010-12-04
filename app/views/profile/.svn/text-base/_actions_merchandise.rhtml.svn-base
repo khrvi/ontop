@@ -1,0 +1,5 @@
+<%= link_to 'Добавить новые товары', :controller => '/admin/merchandise', :action => 'new', :user_id => @user_id %>
+<br/>
+<br/>
+<%= link_to 'Загрузить прайс', :controller => '/profile', :action => 'upload', :user_id => @user_id %>
+<br>

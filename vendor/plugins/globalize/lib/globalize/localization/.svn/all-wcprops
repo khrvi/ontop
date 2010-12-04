@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/uznaj/!svn/ver/7/vendor/plugins/globalize/lib/globalize/localization
+END
+locale.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/uznaj/!svn/ver/7/vendor/plugins/globalize/lib/globalize/localization/locale.rb
+END
+db_translate.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/uznaj/!svn/ver/2/vendor/plugins/globalize/lib/globalize/localization/db_translate.rb
+END
+core_ext.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/uznaj/!svn/ver/7/vendor/plugins/globalize/lib/globalize/localization/core_ext.rb
+END
+db_view_translator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/uznaj/!svn/ver/2/vendor/plugins/globalize/lib/globalize/localization/db_view_translator.rb
+END
+rfc_3066.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/uznaj/!svn/ver/2/vendor/plugins/globalize/lib/globalize/localization/rfc_3066.rb
+END
+core_ext_hooks.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/uznaj/!svn/ver/2/vendor/plugins/globalize/lib/globalize/localization/core_ext_hooks.rb
+END

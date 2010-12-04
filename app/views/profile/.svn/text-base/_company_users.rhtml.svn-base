@@ -1,0 +1,18 @@
+<table width='100%' border="0">
+    <th>Имя пользователя</th>
+    <th>Действия</th>
+    <% users.each do |w| %>
+        <tr>
+            <td width="50%">
+                <%= h Actor.find(w.actor_id).user.login %>
+            </td>
+            <td width="50%">
+                <%= link_to 'Изменить роль', :controller => "/admin/person", :action => 'edit', :id => w.actor_id, :path => 'show' %>
+                &nbsp;&nbsp;&nbsp;
+                <%= link_to 'Удалить', {:controller => "admin/person", :action => 'destroy', :id => w.actor_id, :path => 'show'}, :confirm => 'Вы уверены что хотите удалить компанию?', :method => :post %>
+                <br/>
+            </td>
+        </tr>
+    <% end %>
+</table>  
+		

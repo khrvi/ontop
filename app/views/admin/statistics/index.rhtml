@@ -1,0 +1,53 @@
+<h1> <%= 'Статистика' %> </h1>
+<div style="float:left">
+	<h2> <%= 'Пользователи' %> </h2>
+	
+	<table cellspacing="5">
+	  <tr>
+	    <td class="data" width="180"> <%= 'Всего пользователей' %> </td>
+	    <td class="data"> <%= @count_users %> </td>
+	  </tr>
+	  <tr>
+	    <td class="data" width="180"> <%= 'Количество активных пользователей' %> </td>
+	    <td class="data"> <%= @count_users_active %> </td>
+	  </tr>
+	</table>
+	
+	<h2> <%= 'Данные' %> </h2>
+	
+	<table cellspacing="5">
+	  <tr>
+	    <td class="data" width="180"> <%= 'Количество Брэндов' %> </td>
+	    <td class="data"> <%= @count_brands %> </td>
+	  </tr>
+	  <tr>
+	    <td class="data" width="180"> <%= 'Количество Товаров' %> </td>
+	    <td class="data"> <%= @count_merchandises %> </td>
+	  </tr>
+	  <tr>
+	    <td class="data" width="180"> <%= 'Количество Категорий' %> </td>
+	    <td class="data"> <%= @count_categories %> </td>
+	  </tr>
+	  <tr>
+	    <td class="data" width="180"> <%= 'Количество компаний' %> </td>
+	    <td class="data"> <%= @count_companies %> </td>
+	  </tr>
+	</table>
+</div>
+
+<div style="float:left;margin-left: 50px;">
+	<h2> <%= 'Последние подключения' %> </h1>
+	
+	<table class="data">
+	  <% @last_logins.each do |sl| %>
+	    <tr>
+	      <td class="data"> <%= h sl.login %> </td>
+	      <td class="data"> <%= short_datetime sl.login_at %> </td>
+	      <td class="data"> <%= h sl.login_type %> </td>
+	    </tr>
+	  <% end %>
+	</table>
+	<%= link_to 'Больше ...', :action => 'login' %>
+</div>
+<%= @graph %>
+<div style="clear:both"></div>

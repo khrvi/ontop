@@ -1,0 +1,13 @@
+<div class="content-title"><a href="index.html">Описание характеристик товара для данной категории</a></div>		
+<% form_tag({:controller => 'profile',:action => 'save_parameters_for_category'}) do %>
+	<br/>  
+	<br/>      
+		<div id="add_param" style="float:left">
+		   <%= render :partial => 'shared/table', :locals => {:width => '100%',
+		    						 :name => "pr_field",
+		    						 :partial => "/profile/parameters_field",
+		    						 :title => "Характеристики товара:",
+		    						 :hash => {} } %> 
+		</div>
+	<%= submit_tag 'Сохранить изменения' %>
+<% end %>

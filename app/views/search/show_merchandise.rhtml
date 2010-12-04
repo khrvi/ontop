@@ -1,0 +1,37 @@
+<div class="content-title">
+  <a href=""> Информация о товаре <%= h @merchandise.name %></a>
+</div>
+<br>
+<% if @valid_role %>
+  <p><%= link_to 'Редактировать', :controller => 'admin/merchandise', :action => 'edit', :id => @merchandise.id %></p>
+<% end %>
+<table border="0" width="100%">
+  <tr>
+    <td width="300px">
+      <%= render :partial => 'shared/table', :locals => {:width => '100%',
+        :name => "images_field",
+        :partial => "/search/merch_images_field",
+        :title => "Изображения:",
+        :hash => {} } %>
+    </td>
+    <td width="250px">
+      <%= render :partial => 'shared/table', :locals => {:width => '50%',
+        :name => "chart_field",
+        :partial => "/shared/chart",
+        :title => "График изменения цены:",
+        :hash => {} } %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= render :partial => 'shared/table', :locals => {:width => '100%',
+        :name => "parameters_field",
+        :partial => "/search/parameters_field",
+        :title => "Технические характеристики:",
+        :hash => {:create_new_mer => false, :first_time => false} } %>
+    </td>
+    <td>
+      <%=h @merchandise.description %>
+    </td>
+  </tr>
+</table>

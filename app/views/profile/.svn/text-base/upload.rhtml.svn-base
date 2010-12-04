@@ -1,0 +1,22 @@
+<% form_tag({ :action=>'upload_file'}, :multipart => true) do %>
+<br/>
+  <h4><%= 'Пожалуйста выберите CSV file для загрузки прайса' %></h4>
+
+  <%= file_field_tag "file" %> 
+
+  <%= submit_tag  "Сохранить" %>
+  <br/>
+  <br/>
+<%= check_box_tag 'ignore', '1' %> <%= 'Игнорировать ошибки при загрузке файла' %>
+<% end %>
+
+<br/>
+ <div id="format" >
+	<%= render :partial => 'shared/table', :locals => {:width => '80%',
+	 :name => "format_company", 
+	 :partial => "/profile/log",
+	 :title => "Результаты выполнения действия:", 
+	 :hash => {:er => params[:er],:errors => nil, 
+	 :amount => 0} } %>
+ </div>
+  

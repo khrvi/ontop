@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/uznaj/!svn/ver/7/vendor/plugins/globalize
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/uznaj/!svn/ver/2/vendor/plugins/globalize/LICENSE
+END
+init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/uznaj/!svn/ver/2/vendor/plugins/globalize/init.rb
+END
+install.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/uznaj/!svn/ver/2/vendor/plugins/globalize/install.rb
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/uznaj/!svn/ver/7/vendor/plugins/globalize/README
+END

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/uznaj/!svn/ver/92/config/deploy
+END
+production.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/uznaj/!svn/ver/78/config/deploy/production.rb
+END
+staging.rb
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/uznaj/!svn/ver/92/config/deploy/staging.rb
+END

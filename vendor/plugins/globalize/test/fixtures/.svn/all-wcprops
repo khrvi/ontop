@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/uznaj/!svn/ver/2/vendor/plugins/globalize/test/fixtures
+END
+globalize_categories_products.yml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/uznaj/!svn/ver/2/vendor/plugins/globalize/test/fixtures/globalize_categories_products.yml
+END
+globalize_countries.yml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/uznaj/!svn/ver/2/vendor/plugins/globalize/test/fixtures/globalize_countries.yml
+END
+globalize_simples.yml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/uznaj/!svn/ver/2/vendor/plugins/globalize/test/fixtures/globalize_simples.yml
+END
+globalize_manufacturers.yml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/uznaj/!svn/ver/2/vendor/plugins/globalize/test/fixtures/globalize_manufacturers.yml
+END
+globalize_translations.yml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/uznaj/!svn/ver/2/vendor/plugins/globalize/test/fixtures/globalize_translations.yml
+END
+globalize_products.yml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/uznaj/!svn/ver/2/vendor/plugins/globalize/test/fixtures/globalize_products.yml
+END
+globalize_categories.yml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/uznaj/!svn/ver/2/vendor/plugins/globalize/test/fixtures/globalize_categories.yml
+END
+globalize_languages.yml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/uznaj/!svn/ver/2/vendor/plugins/globalize/test/fixtures/globalize_languages.yml
+END
+globalize_unlocalized_classes.yml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/uznaj/!svn/ver/2/vendor/plugins/globalize/test/fixtures/globalize_unlocalized_classes.yml
+END

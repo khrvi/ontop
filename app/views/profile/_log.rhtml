@@ -1,0 +1,26 @@
+<% unless params[:amount].to_i == 0 %>
+    <div class="message_text">
+        Всего обработанных записей: <%= h params[:amount] %>
+        <br/>
+        <% if params[:er] %>
+            <div class="errors_text">
+                Ошибки:<br/>
+                <% e = params[:errors].split('/') %>
+                <% e.each do |q| %>
+                    <%= h q %>
+                    <br/>
+                <% end %>
+            </div>
+        <% else %>
+            Сообщения:<br/>
+            <% e = params[:errors].split('/') %>
+            <% e.each do |q| %>
+                <%= h q %>
+                <br/>
+            <% end %>
+
+        <% end %>
+    </div>
+<% else %>
+    <h4>Выберите CSV файл для загрузки прайса. Прайс должен быть сохранен в формате CSV с кодировкой UTF8.</h4>
+<% end %>

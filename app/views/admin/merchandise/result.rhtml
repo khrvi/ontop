@@ -1,0 +1,45 @@
+<% form_tag(  {:controller => 'winery' ,:action=>'save_all'},:name => 'winery_upload', :multipart => true) do %>
+
+  <% categories_first =  nil %>
+  <% category = nil %>
+
+  <% category_string = params[:country_array] %>
+  <% list_winery_string = params[:list_categories_array] %>
+  <% name_combo_string = params[:name_combo_array] %>
+
+  <% list_winery_array = list_winery_string.split(",") %>
+  <% name_combo_array = name_combo_string.split(",") %>
+  <% category_array = category_string.split(",") %>
+  <% max = category_array.length %>
+
+  <% max.times do |i|%>
+    <hr>
+    <% if category_array[i] == 'nil' %>
+      <h4>
+        <%= "The category not define for the winery " + list_winery_array[i] +  " .Please select a category" %><br/>
+      </h4>
+      <label for="category_country_id"> <%= 'Category' %>: </label>
+      <div id="<%= name_combo_array[i]%>">
+        <%= render :partial => 'category_selection', :locals => {:name_combo=> name_combo_array[i],:category_id => categories_first,:category =>category, :answer_ajax => true} %>
+      </div>
+
+    <% else %>
+
+      <h4> <%= "The category " + category_array[i] +  " not found in the database. Please select a new category for winery(s) " + list_winery_array[i] %></h4>
+      <label for="category_country_id"> <%= 'Category'%>: </label>
+      <div id="<%= name_combo_array[i]%>">
+        <%= render :partial => 'category_selection', :locals => {:name_combo=> name_combo_array[i],:f => false,:category_id => categories_first,:category =>category,:answer_ajax => true} %>
+      </div>
+
+    <% end %>
+  <% end %>
+  <input id="max" type="hidden" value="<%= params[:max] %>" name="max"/>
+  <input id="file" type="hidden" value="<%= params[:tmp_file] %>" name="file"/>
+  <hr>
+  <input TYPE=button   OnClick='EmptyField("<%=name_combo_string%>","<%=list_winery_string%>",2);'  VALUE="Save">
+<% end %>
+<br/>
+<a href="/admin/winery/upload" onclick="<%= remote_function(:url => { :controller => 'category',:action => 'del_file'} , :file => params[:tmp_file] ) %> ">
+<%= 'Back' %></a>
+  
+       

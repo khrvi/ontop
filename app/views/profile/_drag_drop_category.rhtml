@@ -1,0 +1,40 @@
+<style>
+.hover {background-color: #888888;}
+#pending ul li, #completed ul li 
+{list-style: none;
+cursor: -moz-grab;}
+#pending, #completed 
+{border: 1px solid gray;}
+
+</style>
+
+<h4>Существующие категории товаров</h4>
+<div id="pending">
+	<%= render :partial => "/admin/category/categories" %>
+</div>
+<br/>
+<br/>
+<h4>Категории товаров вашего предприятия</h4>
+<div id="completed">
+	<%= render :partial => "/catalog/categories", :locals => {:list => nil} %>
+</div>
+	
+     <%= drop_receiving_element("pending",
+     :accept=> 'completed_todo',
+     :complete => "$(element).hide();",
+     :before => "$(element).show();",
+     :hoverclass => 'hover',
+     :with => "'todo=' + encodeURIComponent(element.id)",
+     :url =>{ :action => :todo_pending  }) %>
+     
+     <%= drop_receiving_element("completed",
+     :accept=> 'pending_todo',
+     :complete => "",
+     :before => "",
+     :hoverclass => 'hover',
+     :with => "'todo=' + encodeURIComponent(element.id)",
+     :url =>{ :action => :todo_complited }  ) %>         
+     
+
+<br/>     
+<%= submit_tag 'Создать' %>

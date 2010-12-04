@@ -1,0 +1,9 @@
+<div class="content-title">
+  <a href="">Создание нового бренда</a>
+</div>
+<br>
+<% form_tag({:action => 'create'}, :multipart => true) do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag 'Сохранить' %>
+<% end %>
+<%= link_to 'Назад к списку', :action => 'index' %>
