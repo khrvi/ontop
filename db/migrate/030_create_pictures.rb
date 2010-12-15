@@ -3,8 +3,8 @@ class CreatePictures < ActiveRecord::Migration
     create_table :pictures do |t|
       t.column :title,         :string
       t.column :content_type,  :string
-      t.column :data,          :binary, :limit => 5.megabyte
-      t.column :icon_data,     :binary, :limit => 2.megabyte
+      t.column :data,          :binary#, :limit => 5.megabyte
+      t.column :icon_data,     :binary#, :limit => 2.megabyte
     end
   end
 
