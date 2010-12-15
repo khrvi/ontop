@@ -1,6 +1,6 @@
 class MerchandiseColumnName < ActiveRecord::Base
   belongs_to :category
-  wnw_ferret 'name'
+#  wnw_ferret 'name'
 
   def self.for_select
     result = []

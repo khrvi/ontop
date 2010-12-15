@@ -8,7 +8,7 @@ class Merchandise < ActiveRecord::Base
   belongs_to :price_by_dates  
   belongs_to :brand
   
-  wnw_ferret 'name'
+#  wnw_ferret 'name'
   attr_accessor :ferret_score
   
   def price

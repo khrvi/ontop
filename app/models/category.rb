@@ -8,7 +8,7 @@ class Category < ActiveRecord::Base
   has_many :merchandise_column_names
   has_and_belongs_to_many :companies
 
-  wnw_ferret 'name'
+  #wnw_ferret 'name'
 
   def full_name separator = ' / '
     s = ''

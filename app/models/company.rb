@@ -10,7 +10,7 @@ class Company < ActiveRecord::Base
   has_many :price_by_dates
   has_many :address_by_dates
   has_many :conversion_rates
-  wnw_ferret 'name'
+#  wnw_ferret 'name'
      
   validates_presence_of :name,:message => "Значения поля 'Название' не должно быть пустыми"
   validates_exclusion_of :name,:message => "Значения поля 'Название' не должно содержать лишних знаков", :in => %w{ 1 2 3 4 5 6 7 8 9 0 < > + = * # @ ! ~}

@@ -2,7 +2,7 @@ class City < ActiveRecord::Base
   has_many :albums, :as => :owner
   has_many :districts
   
-  wnw_ferret 'name'
+  # wnw_ferret 'name'
   
   def self.for_select
     result = []

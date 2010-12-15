@@ -1,7 +1,7 @@
 class District < ActiveRecord::Base
   belongs_to :city
   has_many   :address_by_dates
-  wnw_ferret 'name'
+#  wnw_ferret 'name'
 
   def self.for_select
     result = []

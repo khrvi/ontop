@@ -1,6 +1,6 @@
 class MerchandiseColumnDesc < ActiveRecord::Base
   belongs_to :merchandise
-  wnw_ferret 'column_value'
+#  wnw_ferret 'column_value'
 
   def self.for_select(cat_id, col)
     value = []

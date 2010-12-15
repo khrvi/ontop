@@ -4,7 +4,7 @@ class Brand < ActiveRecord::Base
   has_many :merchandises
   has_many :albums, :as => :owner, :dependent => :destroy
   
-  wnw_ferret 'name'
+#  wnw_ferret 'name'
      
   def self.for_select
     result = []

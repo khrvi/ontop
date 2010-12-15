@@ -29,7 +29,7 @@ module ImageOwner
 #    add_picture 'image/jpeg', data, title
 #  end
 
-<<<<<<< .mine
+#<<<<<<< .mine
 #  def delete_pictures params
 #    poly_table.find(:all, :conditions => [fk + '=?', self.id]).each do |m|
 #      pid = m.picture_id
@@ -64,10 +64,10 @@ module ImageOwner
 #  end
   def change_geometry(imgs)
     imgs.change_geometry('640x480') { |cols, rows, img|
-=======
-  def change_geometry(imgs)
-    imgs.change_geometry!('640x480') { |cols, rows, img|
->>>>>>> .r164
+# =======
+#   def change_geometry(imgs)
+#     imgs.change_geometry!('640x480') { |cols, rows, img|
+# >>>>>>> .r164
       if cols < 640 || rows < 480
         img.resize!(cols, rows)
         bg = Magick::Image.new(640,480){self.background_color = "white"}
@@ -76,21 +76,21 @@ module ImageOwner
         img.resize!(cols, rows)
       end
     }
-<<<<<<< .mine
+# <<<<<<< .mine
   end
 
   private
   def add_picture(type, data, title)
     image = Magick::Image::from_blob(data.read).first
     thumb = image.resize_to_fit(Picture::ThumbWidth, Picture::ThumbHeight)
-=======
-  end
-
-  private
-  def add_picture(type, data, title)
-    imgs = Magick::Image::from_blob(data.read).first#}Magick::Image::read(data).first
-    thumb = imgs.resize_to_fit(Picture::ThumbWidth, Picture::ThumbHeight)
->>>>>>> .r164
+# =======
+#   end
+# 
+#   private
+#   def add_picture(type, data, title)
+#     imgs = Magick::Image::from_blob(data.read).first#}Magick::Image::read(data).first
+#     thumb = imgs.resize_to_fit(Picture::ThumbWidth, Picture::ThumbHeight)
+# >>>>>>> .r164
     pic = Picture.create(:title => title,
                          :content_type => type,
                          :icon_data => thumb.to_blob,

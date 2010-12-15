@@ -16,8 +16,8 @@ Rails::Initializer.run do |config|
   ENV['LANG']     = 'american_america.AL32UTF8'
 #  ENV['LC_CTYPE'] = 'american_america.AL32UTF8'
 #  $KCODE = 'UTF8'
-  require 'acts_as_ferret'
-  Ferret.locale   = 'american_america.AL32UTF8'
+  #require 'acts_as_ferret'
+  #Ferret.locale   = 'american_america.AL32UTF8'
 
   # Settings in config/environments/* take precedence over those specified here
 
@@ -160,10 +160,10 @@ end
 #  end
 #end
 
-require 'acts_as_ferret'
+#require 'acts_as_ferret'
 
-class ActiveRecord::Base
-  def self.wnw_ferret fields
-    acts_as_ferret({:fields => if fields.kind_of? Array then fields else [fields] end}, {:analyzer => Ferret::Analysis::StandardAnalyzer.new([])})
-  end
-end
+# class ActiveRecord::Base
+#   def self.wnw_ferret fields
+#     acts_as_ferret({:fields => if fields.kind_of? Array then fields else [fields] end}, {:analyzer => Ferret::Analysis::StandardAnalyzer.new([])})
+#   end
+# end
