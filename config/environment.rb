@@ -51,6 +51,8 @@ Rails::Initializer.run do |config|
 
   # See Rails::Configuration for more options
 
+  config.gem "rmagick", :lib => "RMagick"
+
   AUTHORIZATION_MIXIN = "object roles"
   DEFAULT_REDIRECTION_HASH = { :controller => 'account', :action => 'login' }
   STORE_LOCATION_METHOD = :store_return_location
