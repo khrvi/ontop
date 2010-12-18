@@ -1,94 +1,0 @@
-8
-
-dir
-164
-http://svn2.assembla.com/svn/uznaj/vendor/plugins/globalize
-http://svn2.assembla.com/svn/uznaj
-
-
-
-2008-02-05T08:08:23.111905Z
-7
-khrvi
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-38686702-15cf-42e4-a595-3071df8bf5ea
-
-test
-dir
-
-LICENSE
-file
-
-
-
-
-2008-08-14T12:46:07.796875Z
-79630061a8b93a1487e701942cf01948
-2008-01-06T17:21:37.469907Z
-2
-khrvi
-
-tasks
-dir
-
-init.rb
-file
-
-
-
-
-2008-08-14T12:46:07.812500Z
-106bc5de7d1bb47463f9f715eb6aae0b
-2008-01-06T17:21:37.469907Z
-2
-khrvi
-
-lib
-dir
-
-populators
-dir
-
-install.rb
-file
-
-
-
-
-2008-08-14T12:46:07.828125Z
-a9287b94e3fbf927090776dde439f2c3
-2008-01-06T17:21:37.469907Z
-2
-khrvi
-
-data
-dir
-
-generators
-dir
-
-README
-file
-
-
-
-
-2008-08-14T12:46:07.843750Z
-858e0a6fa0a62a55a463665d16c881c1
-2008-02-05T08:08:23.111905Z
-7
-khrvi
-
