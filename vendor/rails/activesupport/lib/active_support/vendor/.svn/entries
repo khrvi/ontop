@@ -1,40 +1,0 @@
-8
-
-dir
-164
-http://svn2.assembla.com/svn/uznaj/vendor/rails/activesupport/lib/active_support/vendor
-http://svn2.assembla.com/svn/uznaj
-
-
-
-2008-09-03T19:26:08.375634Z
-133
-khrvi
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-38686702-15cf-42e4-a595-3071df8bf5ea
-
-xml-simple-1.0.11
-dir
-
-builder-2.1.2
-dir
-
-memcache-client-1.5.0
-dir
-
-tzinfo-0.3.8
-dir
-

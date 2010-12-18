@@ -1,5 +1,4 @@
-log
-coverage
-tmp/*
-tmtags
-.bundle/
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/**/*
