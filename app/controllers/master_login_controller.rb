@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class MasterLoginController < ApplicationController
 
   layout 'plain'

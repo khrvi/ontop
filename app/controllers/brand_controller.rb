@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class BrandController < ApplicationController
  
   verify :method => :post, :only => [ :destroy, :create, :update ],

@@ -1,4 +1,4 @@
-# This controller handles the login/logout function of the site.  
+# encoding: UTF-8
 class SessionController < ApplicationController
   def new
   end

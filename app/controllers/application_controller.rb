@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   
   layout 'standard'
-protect_from_forgery 
+  protect_from_forgery 
   include AuthenticatedSystem
 
   before_filter :init_menu

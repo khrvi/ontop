@@ -1,3 +1,4 @@
+# encoding: UTF-8
 module ApplicationHelper
 
   def menu_entry caption, action, level, sel=false
@@ -22,7 +23,7 @@ module ApplicationHelper
     if !flag
      '<div style="float:left;">' + link + '<br>' +
         check_box_tag("p_" + id.id.to_s, 1, false) +
-        'Удалить' +
+        'Удалить'.force_coding +
       '</div>'
     else
       link
