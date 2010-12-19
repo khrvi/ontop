@@ -6,7 +6,7 @@ class Category < ActiveRecord::Base
   has_many :albums, :as => :owner
   has_many :company_categories
   has_many :merchandise_column_names
-  has_and_belongs_to_many :companies
+  #has_and_belongs_to_many :companies
 
   #wnw_ferret 'name'
 

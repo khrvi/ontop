@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-  
   layout 'standard'
   protect_from_forgery 
   include AuthenticatedSystem

@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class Person < ActiveRecord::Base
   include ImageOwner
   belongs_to :actor

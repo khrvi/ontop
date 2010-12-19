@@ -1,3 +1,4 @@
+# encoding: UTF-8
 include ImageOwner
 class ProfileController < ApplicationController
 

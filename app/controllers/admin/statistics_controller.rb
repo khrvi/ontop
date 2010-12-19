@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class Admin::StatisticsController < Admin::AbstractAdminController
 
   def pie_links
@@ -32,7 +33,7 @@ class Admin::StatisticsController < Admin::AbstractAdminController
     @count_categories = Category.count
     @count_companies = Company.count
     @last_logins = StatsLogin.find(:all, :order => 'login_at DESC', :limit => 5)
-    temp1 = Company.find_by_city_id(5).length
+    #temp1 = Company.find_by_city_id(5).length
   end
   
   def login

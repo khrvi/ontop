@@ -9,7 +9,7 @@ class BrandController < ApplicationController
   end
 
   def index
-    @brands = Brand.paginate :page => params[:page], :per_page => 5, :order => 'name'
+    @brands = Brand.find(:all).paginate :page => params[:page], :per_page => 5, :order => 'name'
   end
 
   def update_tab

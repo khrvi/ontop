@@ -1,10 +1,11 @@
+# encoding: UTF-8
 class Company < ActiveRecord::Base
   has_many :caches
   has_many :licences
   belongs_to :city
   belongs_to :actor
   has_many :company_categories
-  has_and_belongs_to_many :categories
+ # has_and_belongs_to_many :categories
   has_many :albums, :as => :owner
   has_many :custom_company_name
   has_many :price_by_dates

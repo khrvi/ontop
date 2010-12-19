@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class Admin::MerchandiseController < Admin::AbstractAdminController
 
   # GETs should be safe (see http://www.w3.org/2001/tag/doc/whenToUseGet.html)

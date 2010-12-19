@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class AddressByDate < ActiveRecord::Base
   belongs_to :district
   belongs_to :company

@@ -13,7 +13,7 @@
     <td class="data"><%=h company.company_comment %></td>
     <td class="data">
  		<% company.address_by_dates.map(&:district).map(&:city).each do |e|%>
-   	  	<%=h e.name%>
+   	  	<%#= e.name %>
     <% end %>
     	
     </td>

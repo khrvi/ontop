@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class Admin::AbstractAdminController < ApplicationController
   
   before_filter :check_is_admin_or_datamanager

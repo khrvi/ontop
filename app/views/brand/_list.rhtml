@@ -19,7 +19,7 @@
         <% end %>
       </td>
       <td class="data" valign="top"> <%= link_to h(brand.name), {:controller => "/brand" ,:action => 'show', :brand_id => brand.id} %> </td>
-      <td class="data" valign="top"> <%= h brand.description %> </td>
+      <td class="data" valign="top"> <%#= brand.description %> </td>
       <td class="data" valign="top"> <%= link_to h(brand.site), "http://" + h(brand.site) %> </td>
       <% if @valid_role %>
         <td class="data" valign="top">

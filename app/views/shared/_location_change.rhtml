@@ -6,12 +6,12 @@
 <% end %>
 <br/>
 <input id="<%= obj + '_district_id'%>" type="hidden" value="<%= district_id%>" name="<%= obj + '[district_id]'%>"/>
-<%= link_to_remote 'Выбрать/Изменить ',
+<%= link_to 'Выбрать/Изменить ',
       :url => {
           :controller => '/util/selection_dialog',
           :action => 'test',
           :obj => obj,
           :select_action => 'category_selected',
           :answer_ajax => answer_ajax
-      },
+      }, :remote => true,
       :complete => "set_internal_dialog_position();" %>

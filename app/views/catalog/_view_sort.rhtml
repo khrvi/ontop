@@ -9,7 +9,7 @@
       <% else %>
         <div class="tab2">
           <img width="9" height="9" border="0" alt="" src="http://static.onliner.by/pic/ico_rowview3.gif"/>
-          <%= link_to_remote "Развёрнутый вид списка",  :url => {:action => 'update_tab', :tab => 1, :category_id => @category,:company_id => @company}%>
+          <%= link_to "Развёрнутый вид списка",  :url => {:action => 'update_tab', :tab => 1, :category_id => @category,:company_id => @company}, :remote => true %>
         </div>
       <% end %>
       <% if tab == 2 %>
@@ -20,7 +20,7 @@
       <% else %>
         <div class="tab2">
           <img width="9" height="9" border="0" alt="" src="http://static.onliner.by/pic/ico_gridview3.gif"/>
-          <%= link_to_remote "Табличный вид для быстрого обзора",  :url => {:action => 'update_tab', :tab => 2, :category_id => @category,:company_id => @company }%>
+          <%= link_to "Табличный вид для быстрого обзора",  :url => {:action => 'update_tab', :tab => 2, :category_id => @category,:company_id => @company }, :remote => true%>
         </div>
       <% end %>
 
@@ -32,7 +32,7 @@
       <% else %>
         <div class="tab2">
           <img width="8" height="9" border="0" alt="" src="http://static.onliner.by/pic/ico_listview.gif"/>
-          <%= link_to_remote "Одностраничный список",  :url => {:action => 'update_tab', :tab => 3, :category_id => @category,:company_id => @company }%>
+          <%= link_to "Одностраничный список",  :url => {:action => 'update_tab', :tab => 3, :category_id => @category,:company_id => @company }, :remote => true%>
         </div>
       <% end %>
     </td>

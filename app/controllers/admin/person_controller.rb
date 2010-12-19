@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # Controller fuer die Administration von Users und Persons
 class Admin::PersonController < Admin::AbstractAdminController
 
