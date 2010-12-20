@@ -7,6 +7,7 @@ gem 'rails', '3.0.3'
 gem 'mysql'
 gem 'will_paginate'
 gem 'rmagick'#, '2.13.1'
+gem 'less'
 
 # Use unicorn as the web server
 gem 'unicorn'

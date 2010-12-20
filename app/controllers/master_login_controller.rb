@@ -2,10 +2,7 @@
 class MasterLoginController < ApplicationController
 
   layout 'plain'
-  
-  def index
-  end
-  
+
   def login
     ml = MasterLogin.find_by_login(params[:master_login])
     if ml && ml.password == params[:master_password]
