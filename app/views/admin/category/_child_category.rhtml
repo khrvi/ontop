@@ -10,7 +10,7 @@
 							<tr>
 							<td>
 					  	<div id="link_<%= item.id %>" >
-					  		<%= link_to_remote image_tag('/images/background/minus.gif', :style => 'border:none;'), :url => {:controller => "/catalog",:action => 'list_up_down', :id => item.id, :flag => true, :contr => false} %>
+					  		<%= link_to image_tag('/images/background/minus.gif', :style => 'border:none;'), :url => {:controller => "/catalog",:action => 'list_up_down', :id => item.id, :flag => true, :contr => false}, :remote => true %>
 					   	</div>
 					   		</td>
 					    	<td>
@@ -29,7 +29,7 @@
 					  	<% m = Merchandise.find_all_by_category_id(item.id) %>
 						<% if m.length > 0 %>
 							<% @category = item.id %>
-									<%= link_to_remote item.name,  :url => { :action => 'update_merch', :category_id => item.id }%>	
+									<%= link_to item.name,  :url => { :action => 'update_merch', :category_id => item.id }, :remote => true %>	
 							
 						<% else%>
 									<%= item.name %>

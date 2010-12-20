@@ -1,5 +1,6 @@
 class AddMasterData < ActiveRecord::Migration
   class MasterLogin < ActiveRecord::Base; end
+  class Person < ActiveRecord::Base;end
   def self.up
     User.transaction do
       MasterLogin.create! :login => 'admin', :password => '4283'

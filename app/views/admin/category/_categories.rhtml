@@ -10,7 +10,7 @@
 				<tr>
 				<td>
 		  			<div id="link_<%= r.id %>" >
-		  				<%= link_to_remote image_tag('/images/background/minus.gif', :style => 'border:none;'), :url => {:controller => "/catalog",:action => 'list_up_down', :id => r.id, :flag => true, :contr => false} %>
+		  				<%= link_to image_tag('/images/background/minus.gif', :style => 'border:none;'), :url => {:controller => "/catalog",:action => 'list_up_down', :id => r.id, :flag => true, :contr => false}, :remote => true %>
 		   			</div>
 		   		</td>
 		    	<td>

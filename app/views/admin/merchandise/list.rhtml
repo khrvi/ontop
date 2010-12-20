@@ -1,5 +1,5 @@
 <h3><%= 'Выберите категорию товара:' %></h3>
-<%= render :partial => '/admin/category/categories', :locals => {:root => nil, :depth => 0} %>
+<%= (render :partial => '/admin/category/categories', :locals => {:root => nil, :depth => 0}).force_encoding('UTF-8') %>
 
 <br/>
 

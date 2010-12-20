@@ -17,7 +17,7 @@
       <% end %>
     <% end %>
     <% if count > c %>
-      <%= link_to_remote r,  :url => {:action => 'change_company', :company_id => comp_id }%>
+      <%= link_to r,  :url => {:action => 'change_company', :company_id => comp_id }, :remote => true %>
     <% end %>
   <% end %>
   <% if count <= c %>
