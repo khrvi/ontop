@@ -8,6 +8,7 @@ gem 'mysql'
 gem 'will_paginate'
 gem 'rmagick'#, '2.13.1'
 gem 'less'
+gem "simple-navigation"
 
 # Use unicorn as the web server
 gem 'unicorn'
