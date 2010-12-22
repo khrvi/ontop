@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080921153016) do
+ActiveRecord::Schema.define(:version => 20101222154128) do
 
   create_table "actors", :force => true do |t|
     t.string   "actor_type"
@@ -39,6 +39,12 @@ ActiveRecord::Schema.define(:version => 20080921153016) do
     t.integer "picture_id"
     t.integer "owner_id"
     t.string  "owner_type"
+  end
+
+  create_table "brain_busters", :force => true do |t|
+    t.string "question"
+    t.string "answer"
+    t.string "locale"
   end
 
   create_table "brands", :force => true do |t|

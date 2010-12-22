@@ -44,14 +44,9 @@
   </p>
   <p>
     <div id="cap_up">
-      <%= show_simple_captcha( :label => 'Пожалуйста введите код, представленный на картинке', :image_style => "simply_red", :distortion => "medium" )  %>
+      <%= render :partial => '/captcha' %>
     </div>
     <br/>
-  </p>
-  <p>
-    Если вы не можете прочитать код на картинке, нажмите
-    <%= link_to_remote 'сдесь', :url => { :action => "update_div" } %>
-    чтобы сгенерировать новый код
   </p>
   <p>
     <%= submit_tag "Регистрировать" -%>

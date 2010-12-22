@@ -1,14 +1,9 @@
 # encoding: UTF-8
 class UsersController < ApplicationController
+  before_filter :create_brain_buster, :only => :new
   def new 
   end
      
-  def update_div
-    render :update do |page|
-      page.replace_html 'cap_up', :partial => 'captcha'
-    end
-  end
-
   def create
     user = params[:user]
     return if check_user_data(user, params)
@@ -32,6 +27,10 @@ class UsersController < ApplicationController
   end
 
   private
+  
+  def render_or_redirect_for_captcha_failure
+    render :action => "new"
+  end
 
   def check_user_data(user, params)
     err = ''
