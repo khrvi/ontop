@@ -1,6 +1,7 @@
 # encoding: UTF-8
 class UsersController < ApplicationController
   before_filter :create_brain_buster, :only => :new
+  before_filter :validate_brain_buster, :only => :create
   def new 
   end
      
