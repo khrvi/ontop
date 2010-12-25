@@ -1,3 +1,9 @@
+GIT
+  remote: git@github.com:khrvi/let-me-think.git
+  revision: 43924253f7c0c6eb728001c5cdc051258b94e940
+  specs:
+    let-me-think (0.1.1)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -96,6 +102,7 @@ PLATFORMS
 
 DEPENDENCIES
   less
+  let-me-think (= 0.1.1)!
   mysql
   rails (= 3.0.3)
   rmagick

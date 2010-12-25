@@ -9,7 +9,7 @@ gem 'will_paginate'
 gem 'rmagick'#, '2.13.1'
 gem 'less'
 gem "simple-navigation"
-
+gem 'let-me-think', "0.1.1",:git => 'git@github.com:khrvi/let-me-think.git'
 # Use unicorn as the web server
 gem 'unicorn'
 

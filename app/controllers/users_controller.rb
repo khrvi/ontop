@@ -1,7 +1,7 @@
 # encoding: UTF-8
 class UsersController < ApplicationController
-  before_filter :create_brain_buster, :only => :new
-  before_filter :validate_brain_buster, :only => :create
+  before_filter :create_smart_capcha, :only => :new
+  before_filter :validate_smart_capcha, :only => :create
   def new 
   end
      
@@ -28,10 +28,6 @@ class UsersController < ApplicationController
   end
 
   private
-  
-  def render_or_redirect_for_captcha_failure
-    render :action => "new"
-  end
 
   def check_user_data(user, params)
     err = ''
