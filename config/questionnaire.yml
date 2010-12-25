@@ -1,0 +1,6 @@
+load_extended_questions: false
+interval: 10
+questions:
+  en:
+    - What is $1 plus $2?
+    - $1 times $2 is what?
